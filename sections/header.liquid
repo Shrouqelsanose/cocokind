@@ -2,6 +2,9 @@
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 {%- if settings.predictive_search_enabled -%}
   <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -121,15 +124,12 @@
   -%}
   <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
     {%- liquid
-      if section.settings.menu != blank
-        render 'header-drawer'
-      endif
-
-      if section.settings.logo_position == 'top-center' or section.settings.menu == blank
-        render 'header-search', input_id: 'Search-In-Modal-1'
-      endif
-    -%}
-
+    if section.settings.menu != blank
+      render 'header-drawer'
+        endif
+   
+  -%}
+    
     {%- if section.settings.logo_position != 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
@@ -160,16 +160,141 @@
       {%- endif -%}
     {%- endif -%}
 
-    {%- liquid
-      if section.settings.menu != blank
-        if section.settings.menu_type_desktop == 'dropdown'
-          render 'header-dropdown-menu'
-        elsif section.settings.menu_type_desktop != 'drawer'
-          render 'header-mega-menu'
-        endif
-      endif
-    %}
 
+
+
+    {% if section.settings.menu != blank %}
+      {% if section.settings.menu_type_desktop == 'dropdown' %}
+        {% render 'header-dropdown-menu' %}
+      {% elsif section.settings.menu_type_desktop != 'drawer' %}
+          {% comment %} render 'header-mega-menu' {% endcomment %}
+          <nav class="header__inline-menu">
+            <ul class="list-menu list-menu--inline" role="list">
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when "featured_carousel_menu" %}
+                    {% assign featured_collection = block.settings.collection %}
+                    <li>
+  <header-menu>
+    <div id="HeaderMenu-Wrapper-{{ forloop.index }}" class="mega-menu header-menu-wrapper">
+      <div
+        id="HeaderMenu-{{ featured_collection.handle }}"
+        class="header__menu-item list-menu__item link focus-inset header-menu-title"
+      >
+        <span>
+          <a href="{{ featured_collection.url }}">{{- block.settings.menulabel | escape -}}</a>
+        </span>
+        {{- 'icon-caret.svg' | inline_asset_content -}}
+      </div>
+      <div
+        id="MegaMenu-Content-{{ forloop.index }}"
+        class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+        tabindex="-1"
+      >
+        <ul
+          class="mega-menu__list page-width mega-menu__list--condensed"
+          role="list"
+        >
+          <div class="menu-styles" data-flickity='{ "cellAlign": "center", "contain": true }'>
+            {% for product in featured_collection.products %}
+              <div class="mega-menu__product">
+                {% render 'card-product', card_product:product %}
+              </div>
+            {% endfor %}
+          </div>
+        </ul>
+        <div class="featured_carousel_menu-title">
+          <a href="{{ featured_collection.url }}">{{ block.settings.title }}</a>
+        </div>
+      </div>
+    </div>
+  </header-menu>
+</li>
+
+                    {% when 'links_types_menu' %}
+                      {% assign menuLinks = block.settings.linksMenu %}
+                      <li>
+                        <header-menu>
+                          <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu ">
+                            <summary
+                              id="HeaderMenu-{{ menuLinks.handle }}"
+                              class="header__menu-item list-menu__item link focus-inset"
+                            >
+                              <span
+                              >
+                               <a href="{{ products.url }}">{{- block.settings.menuLabel | escape -}}</a>
+                              </span>
+                              {{- 'icon-caret.svg' | inline_asset_content -}}
+                            </summary>
+                            <div
+                              id="MegaMenu-Content-{{ forloop.index }}"
+                              class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+                              tabindex="-1"
+                            >                          
+                            <div class="links_types_menu-title"><a href="{{ products.url }}">{{  block.settings.title }}</a></div>
+                            <div class="menu-links-container">
+                           <div class="menu__links-link-container">
+                              <ul class="menu__links-link">
+                              {% for link in menuLinks.links %}
+                                  <li>
+
+                                    <a class="menu__links--link-type" href="{{ link.url }}" 
+                                       {% if link.url contains 'http' %} target="_blank" rel="noopener noreferrer" {% endif %}>
+                                       {{ link.title | escape  }}
+                                    </a>
+                                  </li>
+                                {% endfor %}
+                                </ul>
+                          </div>                         
+                          <div class="menu__img">
+                              <img src="{{ block.settings.menuImg | image_url: width: 1500 , height: 826  }}" alt="{{ block.settings.menuImg.alt }}">
+                             </div>
+                         </div>
+                            </div>
+
+                            
+                          </details>
+                        </header-menu>
+                      </li> 
+                      {% when 'link' %}
+                        <li>
+                          <header-menu>
+                            <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu ">
+                              <summary
+                                id="HeaderMenu-{{ featured_collection.handle }}"
+                                class="header__menu-item list-menu__item link focus-inset"
+                              >
+                                <span
+                                >
+                                 <a href="{{ featured_collection.url }}">{{- block.settings.linklebal | escape -}}</a>
+                                </span>
+                               
+                              </summary>
+                             
+                            </details>
+                          </header-menu>
+                        </li>
+                {% endcase %}
+              {% endfor %}
+            </ul>
+          </nav>
+      {% endif %}
+    {% endif %}
+
+
+    {% comment %} <div>
+      {% for block in section.blocks %}
+        <div>
+          <h1>{{ block.settings.menulabel }}</h1>
+            <div>
+              {% for product in block.settings.collection.products %}
+                 {% render 'card-product' , card_product:product %}
+                {% endfor %}
+            </div>
+          <div><a href="">{{ block.settings.title }}</a></div>
+        </div>
+      {% endfor %}
+     </div> {% endcomment %}
     {%- if section.settings.logo_position == 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
@@ -237,11 +362,11 @@
               {%- if customer and customer.has_avatar? -%}
                 {{ customer | avatar }}
               {%- else -%}
-                <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
+                <span class="svg-wrapper">{% render 'icons-account' %}</span>
               {%- endif -%}
             </account-icon>
           {%- else -%}
-            <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
+            <span class="svg-wrapper">{% render 'icons-account' %}</span>
           {%- endif -%}
           <span class="visually-hidden">
             {%- liquid
@@ -264,9 +389,9 @@
 
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
           {% if cart == empty %}
-            <span class="svg-wrapper">{{'icon-cart-empty.svg' | inline_asset_content }}</span>
+            <span class="svg-wrapper">{% render 'icons-cart' %}</span>
           {% else %}
-            <span class="svg-wrapper">{{'icon-cart.svg' | inline_asset_content }}</span>
+            <span class="svg-wrapper"> {% render 'icons-cart' %}</span>
           {% endif %}
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         {%- if cart != empty -%}
@@ -442,7 +567,7 @@
 {
   "name": "t:sections.header.name",
   "class": "section-header",
-  "max_blocks": 3,
+  "max_blocks": 7,
   "settings": [
     {
       "type": "select",
@@ -638,7 +763,68 @@
   "blocks": [
     {
       "type": "@app"
+    },
+{
+  "name": "collectoin carousel menu",
+  "type": "featured_carousel_menu",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "collection"
+    },
+    {
+      "type": "text",
+      "id": "menulabel",
+      "label": "label"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
     }
+   
+  ]
+},
+{
+  "name": "links types menu",
+  "type": "links_types_menu",
+  "settings": [
+{
+  "type": "link_list",
+  "id": "linksMenu",
+  "label": "links menu"
+},
+{
+"type": "text",
+"id": "menuLabel",
+"label": "label menu"
+}
+,
+
+{
+  "type": "richtext",
+  "id": "title",
+  "label": "title"
+},
+{
+  "type": "image_picker",
+  "id": "menuImg",
+  "label": "menu image"
+}
+  ]
+},
+{
+  "name": "link",
+  "type": "link",
+  "settings": [
+    {
+      "type": "text",
+      "id": "linklebal",
+      "label": "link label"
+    }
+  ]
+}
   ]
 }
 {% endschema %}

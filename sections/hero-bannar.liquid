@@ -1,0 +1,26 @@
+<div class="hero-bannar">
+  <a href="{{ product.url }}">
+    <img
+      class="hero-bannar"
+      src="{{ section.settings.herobannar |  image_url: width: 6400 , height: 2017  }}"
+      alt="{{ section.settings.herobannar.alt }}"
+    >
+  </a>
+</div>
+{% schema %}
+{
+  "name": "hero bannar",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "herobannar",
+      "label": "hero bannar"
+    }
+  ],
+  "presets": [
+    {
+      "name": "hero bannar"
+    }
+  ]
+}
+{% endschema %}
