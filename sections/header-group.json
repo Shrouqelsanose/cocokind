@@ -7,6 +7,7 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Welcome to our store",
             "link": ""
@@ -32,14 +33,68 @@
         "featured_carousel_menu_HBLUdC": {
           "type": "featured_carousel_menu",
           "settings": {
-            "collection": "trending-products",
+            "collection": "best-sellers",
             "menulabel": "🔥 Trending 🔥",
-            "title": "shop all"
+            "title": "shop all",
+            "linkLabelurl": "shopify:\/\/collections\/trending"
+          }
+        },
+        "links_types_menu_RxeXBe": {
+          "type": "links_types_menu",
+          "settings": {
+            "linksMenu": "shoping",
+            "menuLabel": "Shop all",
+            "title": "<p>Shoping by<\/p>",
+            "menuImg": "shopify:\/\/shop_images\/ewc_-_nav_-_concept_2_2.webp",
+            "linkLabelurl": "shopify:\/\/collections\/all"
+          }
+        },
+        "featured_carousel_menu_Dzw63y": {
+          "type": "featured_carousel_menu",
+          "settings": {
+            "collection": "best-sellers",
+            "menulabel": "best sellers",
+            "title": "shop all best sellers",
+            "linkLabelurl": "shopify:\/\/collections\/best-sellers"
+          }
+        },
+        "link_7LmcFM": {
+          "type": "link",
+          "settings": {
+            "linklebal": "save on sets",
+            "linkLabelurl": "shopify:\/\/collections\/save-on-sets"
+          }
+        },
+        "link_V47Yya": {
+          "type": "link",
+          "settings": {
+            "linklebal": "routine builder",
+            "linkLabelurl": ""
+          }
+        },
+        "link_npY9CL": {
+          "type": "link",
+          "settings": {
+            "linklebal": "rewards",
+            "linkLabelurl": ""
+          }
+        },
+        "link_xGk73f": {
+          "type": "link",
+          "settings": {
+            "linklebal": "about us",
+            "linkLabelurl": ""
           }
         }
       },
       "block_order": [
-        "featured_carousel_menu_HBLUdC"
+        "featured_carousel_menu_HBLUdC",
+        "links_types_menu_RxeXBe",
+        "featured_carousel_menu_Dzw63y",
+        "link_7LmcFM",
+        "link_V47Yya",
+        "link_npY9CL",
+        "link_xGk73f"
       ],
       "settings": {
         "logo_position": "middle-left",
@@ -57,17 +112,10 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
-    },
-    "hero_bannar_U6RgXp": {
-      "type": "hero-bannar",
-      "settings": {
-        "herobannar": "shopify:\/\/shop_images\/Frame_37_10.webp"
-      }
     }
   },
   "order": [
     "announcement-bar",
-    "header",
-    "hero_bannar_U6RgXp"
+    "header"
   ]
 }

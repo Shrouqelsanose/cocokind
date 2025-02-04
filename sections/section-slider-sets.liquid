@@ -1,0 +1,54 @@
+{{ 'section-slider-sets.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+{{ 'quick-add.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<div class="section-slider-sets">
+  <div class="section-slider-sets-container">
+    <div class="section-slider-sets-container_header">
+      <h1 class="section-slider-sets-container_title">
+        {{ section.settings.title }}
+      </h1>
+    </div>
+    <div
+      class="section-slider-sets-container_collecton"
+      data-flickity='{ "cellAlign": "center", "contain": true }'
+    >
+      {% assign my_collection = section.settings.collectionSets.products %}
+      {% for product in my_collection %}
+        <div class="section-slider-sets-container_card-set">
+          {% render 'card-product', card_product: product, quick_add: 'standard' %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "sets slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "collection",
+      "id": "collectionSets",
+      "label": "collection sets"
+    }
+  ],
+  "presets": [
+    {
+      "name": "sets slider"
+    }
+  ]
+}
+{% endschema %}

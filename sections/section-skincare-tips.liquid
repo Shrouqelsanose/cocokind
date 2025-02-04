@@ -1,0 +1,70 @@
+{{ 'section-skincare-tips.css' | asset_url | stylesheet_tag }}
+
+<div class="section-skincare-types page-width">
+  <div class="skincare-container">
+    <div class="skincare-header">
+      <h1 class="skincare-header_title">
+        {{ section.settings.title }}
+      </h1>
+      <p class="skincare-header_subtitle">
+        {{ section.settings.subTitle }}
+      </p>
+    </div>
+    <div class="skincare-container_blocks">
+      {% for block in section.blocks %}
+        <div class="skincare-container_block">
+          <div class="skincare-container_block_img">
+            <img
+              src="{{ block.settings.img |  image_url: width: 70 , height: 70  }}"
+              alt="{{ block.settings.img.alt }}"
+            >
+          </div>
+          <div class="skincare-container_block_type">
+            {{ block.settings.type }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "skincare tips",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "text",
+      "id": "subTitle",
+      "label": "subTitle"
+    }
+  ],
+  "presets": [
+    {
+      "name": "skincare tips"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "kinds",
+      "name": "kinds",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "img"
+        },
+        {
+          "type": "text",
+          "id": "type",
+          "label": "type"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

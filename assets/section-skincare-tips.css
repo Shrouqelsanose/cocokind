@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+.section-skincare-types {
+  padding: 60px;
+}
+.skincare-container {
+  background-color: #ebe6d8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 50px;
+}
+.skincare-header_title p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+.skincare-header_subtitle {
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+.skincare-container_blocks {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 80px;
+  white-space: nowrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 765px) {
+  .skincare-container_blocks {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .section-skincare-types {
+    padding: 10px;
+  }
+  .skincare-container {
+    padding: 15px;
+  }
+  .skincare-header_title p {
+    font-size: 38px;
+    line-height: 32.4px;
+  }
+  .skincare-header_subtitle {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+}
+.skincare-container_block_type {
+  font-size: 18px;
+  font-weight: 900;
+}

@@ -1,7 +1,7 @@
 <div class="hero-bannar">
-  <a href="{{ product.url }}">
+  <a href="{{ section.settings.imgurl }}">
     <img
-      class="hero-bannar"
+      class="hero-bannar-img"
       src="{{ section.settings.herobannar |  image_url: width: 6400 , height: 2017  }}"
       alt="{{ section.settings.herobannar.alt }}"
     >
@@ -15,6 +15,11 @@
       "type": "image_picker",
       "id": "herobannar",
       "label": "hero bannar"
+    },
+    {
+      "type": "url",
+      "id": "imgurl",
+      "label": "img url"
     }
   ],
   "presets": [

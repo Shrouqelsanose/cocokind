@@ -1,0 +1,130 @@
+{{ 'featred-tabs-img.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+{{ 'quick-add.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<div class="section-tabs-products">
+  <div class="section-tabs-products__header">
+    <h1 class="section-tabs-products__header__title">
+      <a href="{{ section.settings.linklabel }}">{{ section.settings.title }}</a>
+    </h1>
+    <div class="section-tabs-products__header__sub-title">
+      <a href="{{ section.settings.linklabel }}">{{ section.settings.linkTitle }}</a>
+    </div>
+  </div>
+
+  <featured-tabs-img>
+    <div class="section-tabs-products__container">
+      {% for block in section.blocks %}
+        <div class="section-tabs-products__tab">
+          <div class="section-tabs-products__image img-border">
+            <img
+              data-tab-target="{{ block.settings.collectionImg.handle }}"
+              src="{{ block.settings.imgTab | image_url: width: 90, height: 90 }}"
+              alt="{{ block.settings.imgTab.alt }}"
+            >
+          </div>
+          <input
+            type="radio"
+            name="{{ section.id }}--tabs"
+            id="block_{{ block.id }}"
+            class="hidden"
+            data-tab-target="{{ block.settings.collectionImg.handle }}"
+            {% if forloop.first %}
+              checked
+            {% endif %}
+          >
+          <div class="featured-collection__tab">
+            <label for="block_{{ block.id }}">
+              <span>
+                {{- block.settings.label -}}
+              </span>
+            </label>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="featured-collection__products-container">
+      {% for block in section.blocks %}
+        <div
+          class="featured-collection__products swiper"
+          data-tab="{{ block.settings.collectionImg.handle }}"
+          style="display: {% if forloop.first %}flex{% else %}none{% endif %};"
+        >
+          <div class="swiper-wrapper">
+            {% assign featured_collection = block.settings.collectionImg %}
+            {% for product in featured_collection.products %}
+              <li class="featured-collection__product swiper-slide">
+                {% render 'card-product', card_product: product, quick_add: 'standard' %}
+              </li>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </featured-tabs-img>
+</div>
+{{ 'featured-img.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+  "name": "image items tabs",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "linkTitle",
+      "label": "link title"
+    },
+    {
+      "type": "url",
+      "id": "linklabel",
+      "label": "link label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "tabs img"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "img_tabs",
+      "name": "img tabs",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "imgTab",
+          "label": "img tab"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "label"
+        },
+        {
+          "type": "collection",
+          "id": "collectionImg",
+          "label": "collection img products"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

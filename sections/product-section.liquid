@@ -1,0 +1,48 @@
+<products-selection>
+  <div class="products-container">
+    {% for product in collections.all.products %}
+      {% assign first_variant = product.variants.first %}
+      <input
+        type="checkbox"
+        class="hidden"
+        name="product-{{ product.id }}"
+        hidden
+        id="product-{{ product.id }}-{{ first_variant.id }}"
+        value="{{ first_variant.id }}"
+      >
+      <label
+        for="product-{{ product.id }}-{{ first_variant.id }}"
+        class="each-product"
+        data-product-id="{{ first_variant.id }}"
+      >
+        {% if product.featured_image %}
+          <img
+            class="products-img"
+            data-product-id="{{ first_variant.id }}"
+            src="{{ product.featured_image.src | product_img_url: '300x300' }}"
+            alt="{{ product.title }}"
+          >
+        {% endif %}
+        <p>
+          <a class="product__title" href="{{ product.url }}">{{ product.title }}</a>
+        </p>
+
+        <form class="product__cart--form" method="post" action="/cart/add">
+          <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+          <div class="product-card-btn">
+            <button type="button" class="add-to-cart-btn" data-product-id="{{ product.variants.first.id }}">
+              <span>Add to Cart</span>
+              <span class="product__price">
+                {{ product.price | money }}
+              </span>
+            </button>
+          </div>
+        </form>
+      </label>
+    {% endfor %}
+  </div>
+  <div id="toast" class="toast">This is a toast message!</div>
+</products-selection>
+
+{{ 'products-section.js' | asset_url | script_tag }}
+{{ 'products-section.css' | asset_url | stylesheet_tag }}

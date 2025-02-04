@@ -1,0 +1,69 @@
+{{ 'section-skincare-footer.css' | asset_url | stylesheet_tag }}
+
+<div class="section-footer-container">
+  <div class="footer-blocks-container page-width">
+    <div class="footer-blocks-container_block">
+      {% for block in section.blocks %}
+        <div class="footer-blocks-container_link">
+          <h2 class="footer-blocks-container_title">{{ block.settings.title }}</h2>
+
+          {% assign links = block.settings.links %}
+          {% for link in links.links %}
+            <div class="footer-blocks_link">
+              <a href="{{ link.url }}"> {{ link.title | escape }}</a>
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="socail-media-brands">
+      <span class="svg-wrapper">{{- 'icon-instagram.svg' | inline_asset_content -}}</span>
+      <span class="svg-wrapper">{{- 'icon-tiktok.svg' | inline_asset_content -}}</span>
+      <span class="svg-wrapper">{{- 'icon-facebook.svg' | inline_asset_content -}}</span>
+      <span class="svg-wrapper">{{- 'icon-youtube.svg' | inline_asset_content -}}</span>
+    </div>
+    <div class="footer-blocks-container_logo">
+      <h1>{{ section.settings.logo }}</h1>
+    </div>
+    <div class="cocokind-sr">
+      <a href="{{ link.url }}"> © 2025, COCOKIND | ALL PICTURES PROPERTY OF COCOKIND</a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "logo",
+      "label": "logo"
+    }
+  ],
+  "presets": [
+    {
+      "name": "footer"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "footer_info",
+      "name": "footer info",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },
+
+        {
+          "type": "link_list",
+          "id": "links",
+          "label": "link"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

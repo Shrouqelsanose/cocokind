@@ -1,0 +1,52 @@
+.section-footer-container {
+  background-color: #d2deec;
+}
+.footer-blocks-container_title {
+  font-size: 32px;
+  font-weight: 900;
+  margin: 0;
+}
+.footer-blocks-container {
+  padding: 40px;
+}
+.footer-blocks-container_block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.footer-blocks_link a {
+  text-decoration: none;
+}
+.socail-media-brands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.socail-media-brands .svg-wrapper {
+  width: 40px;
+  height: 60px;
+  color: black;
+}
+.footer-blocks-container_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.footer-blocks-container_logo h1 {
+  font-size: 42px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.cocokind-sr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.cocokind-sr a {
+  text-decoration: none;
+}

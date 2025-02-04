@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+.section-slider-sets {
+  margin-bottom: 40px;
+}
+.section-slider-sets-container_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 900;
+}
+.section-slider-sets-container_collecton .flickity-viewport {
+  height: 610px !important;
+}
+
+.section-slider-sets-container_card-set {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 450px;
+  height: 600px;
+}
+.section-slider-sets-container_collecton .flickity-page-dots {
+  display: none;
+}
+.section-slider-sets-container_collecton .flickity-button {
+  background-color: transparent;
+}
+.section-slider-sets-container_collecton .flickity-button:hover {
+  background-color: transparent;
+}

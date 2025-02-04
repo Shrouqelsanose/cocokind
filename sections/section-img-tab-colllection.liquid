@@ -1,0 +1,131 @@
+<div class="featured-collection__tabs">
+  {% for block in section.blocks %}
+    <img
+      class="tab-img {% if forloop.first %}active{% endif %}"
+      src="{{ block.settings.imgTab | image_url: width: 100, height: 100 }}"
+      data-tab="{{ block.settings.collectionImg.handle }}"
+      alt="{{ block.settings.label }}"
+    >
+  {% endfor %}
+</div>
+
+<div class="featured-collection__products-container">
+  {% for block in section.blocks %}
+    <div
+      class="featured-collection__products"
+      data-tab="{{ block.settings.collectionImg.handle }}"
+      style="display: {% if forloop.first %}grid{% else %}none{% endif %}; grid-template-columns: repeat(5, 1fr); gap: 20px;"
+    >
+      {% assign featured_collection = block.settings.collectionImg %}
+      {% for product in featured_collection.products %}
+        <li class="featured-collection__product">
+          <div class="product-img">
+            <img
+              src="{{ product.featured_image | image_url: width: 200, height: 200 }}"
+              alt="{{ product.title }}"
+            >
+          </div>
+          <div class="flex-center">
+            <div class="product-title">
+              <h2>{{ product.title }}</h2>
+            </div>
+            <div class="product-description">
+              {{ product.content | strip_html | truncatewords: 5 }}
+            </div>
+            <button class="product-cart-btn">
+              <a href="/add/cart">Add to cart</a>
+              <span>{{ product.price | money }}</span>
+            </button>
+          </div>
+        </li>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.tab-img');
+    const collections = document.querySelectorAll('.featured-collection__products');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', function () {
+        const targetTab = this.getAttribute('data-tab');
+
+        tabs.forEach((img) => img.classList.remove('active'));
+        this.classList.add('active');
+
+        collections.forEach((collection) => {
+          if (collection.getAttribute('data-tab') === targetTab) {
+            collection.style.display = 'grid';
+          } else {
+            collection.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
+<style>
+  .tab-img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s, border 0.3s;
+    border: 2px solid transparent;
+  }
+
+  .tab-img.active {
+    opacity: 1;
+    border: 2px solid #000;
+  }
+
+  .featured-collection__products-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+
+  .featured-collection__product {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+  }
+</style>
+{% schema %}
+{
+  "name": " img tabs collection",
+  "settings": [],
+  "presets": [
+    {
+      "name": "img tabs collection"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "img_tabs",
+      "name": "img tabs",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "imgTab",
+          "label": "img tab"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "label"
+        },
+        {
+          "type": "collection",
+          "id": "collectionImg",
+          "label": "collection img products"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

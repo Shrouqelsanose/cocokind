@@ -948,6 +948,8 @@ summary::-webkit-details-marker {
   max-width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2);
   flex-grow: 1;
   flex-shrink: 0;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 750px) {
@@ -987,7 +989,11 @@ summary::-webkit-details-marker {
 .grid--2-col .grid__item {
   width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2);
 }
-
+.btn-btween {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+}
 @media screen and (min-width: 750px) {
   .grid--2-col .grid__item {
     width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
@@ -1220,11 +1226,11 @@ deferred-media {
 /* component-button */
 /* Button - default */
 
-.button--secondary,
+/* .button--secondary,
 .button--tertiary {
-  --color-button: var(--color-secondary-button);
-  --color-button-text: var(--color-secondary-button-text);
-}
+  --color-button: black;
+  --color-button-text: white;
+} */
 
 .button--tertiary {
   --alpha-button-background: 0;
@@ -1407,7 +1413,12 @@ shopify-accelerated-checkout-cart {
 
 .button--full-width {
   display: flex;
-  width: 100%;
+  max-width: 250px;
+}
+.price-btn {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  line-height: calc(1 + 0.5 / var(--font-body-scale));
 }
 
 .button.loading {
@@ -2519,7 +2530,12 @@ input[type="checkbox"] {
 .header__heading-link:hover .h2 {
   color: rgb(var(--color-foreground));
 }
-
+.mega-menu__product__product-img {
+  max-width: 200px;
+}
+.mega-menu__product__product-img img {
+  width: 100%;
+}
 .header__heading-link .h2 {
   line-height: 1;
   color: black;
@@ -2538,6 +2554,9 @@ input[type="checkbox"] {
   transition: width 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
 }
 
+a {
+  color: black;
+}
 @media screen and (max-width: 989px) {
   .header__heading,
   .header__heading-link {
@@ -2699,9 +2718,10 @@ menu-drawer + .header__search {
   display: inline-flex;
   line-height: 0;
 }
-.hero-bannar {
+.hero-bannar-img {
   width: 100%;
   height: 100%;
+  border: 2px solid black;
 }
 .header--top-center > .header__search {
   display: none;
@@ -2843,9 +2863,6 @@ details[open] > .header__submenu {
     transform: translateY(0);
   }
 }
-.hero-bannar {
-  border: 1px solid black;
-}
 
 .header__menu-item a {
   text-decoration: none;
@@ -2878,7 +2895,7 @@ details[open] > .header__submenu {
 .menu-styles .flickity-button:hover {
   background-color: transparent;
 }
-a:visited {
+.menu-styles a:visited {
   color: black;
 }
 
