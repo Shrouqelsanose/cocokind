@@ -1,10 +1,19 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero_bannar_t7RKLr": {
       "type": "hero-bannar",
       "settings": {
-        "herobannar": "shopify:\/\/shop_images\/Frame_37_10.webp",
-        "imgurl": "shopify:\/\/products\/electrolyte-water"
+        "herobannar": "shopify://shop_images/Frame_37_10.webp",
+        "imgurl": ""
       }
     },
     "image_banner": {
@@ -23,7 +32,7 @@
           "disabled": true,
           "settings": {
             "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
+            "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -55,15 +64,15 @@
         "img_tabs_UXBRYe": {
           "type": "img_tabs",
           "settings": {
-            "imgTab": "shopify:\/\/shop_images\/bc8f5759893e--dullness.svg",
+            "imgTab": "shopify://shop_images/bc8f5759893e--dullness.svg",
             "label": "best seller",
-            "collectionImg": "serums-essences"
+            "collectionImg": "body"
           }
         },
         "img_tabs_Xf4wLD": {
           "type": "img_tabs",
           "settings": {
-            "imgTab": "shopify:\/\/shop_images\/c572d1629929--shopping-bag.svg",
+            "imgTab": "shopify://shop_images/c572d1629929--shopping-bag.svg",
             "label": "NEW",
             "collectionImg": "new"
           }
@@ -71,7 +80,7 @@
         "img_tabs_h9id9M": {
           "type": "img_tabs",
           "settings": {
-            "imgTab": "shopify:\/\/shop_images\/ff1078ca3eca--serum.svg",
+            "imgTab": "shopify://shop_images/ff1078ca3eca--serum.svg",
             "label": "Serums & Essences",
             "collectionImg": "serums-essences"
           }
@@ -79,7 +88,7 @@
         "img_tabs_633Nbj": {
           "type": "img_tabs",
           "settings": {
-            "imgTab": "shopify:\/\/shop_images\/03b3a5ebe1c1--cleansers-tonners.svg",
+            "imgTab": "shopify://shop_images/03b3a5ebe1c1--cleansers-tonners.svg",
             "label": "Cleansers + Toners",
             "collectionImg": "cleansers-toners"
           }
@@ -87,7 +96,7 @@
         "img_tabs_X9jL6k": {
           "type": "img_tabs",
           "settings": {
-            "imgTab": "shopify:\/\/shop_images\/223c986af704--moisturizers-spf-1.svg",
+            "imgTab": "shopify://shop_images/223c986af704--moisturizers-spf-1.svg",
             "label": "Moisturizers",
             "collectionImg": "moisturizer"
           }
@@ -95,7 +104,7 @@
         "img_tabs_QAKyAJ": {
           "type": "img_tabs",
           "settings": {
-            "imgTab": "shopify:\/\/shop_images\/8e876e7823cb--c572d1629929-shopping-bag_1.svg",
+            "imgTab": "shopify://shop_images/8e876e7823cb--c572d1629929-shopping-bag_1.svg",
             "label": "All",
             "collectionImg": "body"
           }
@@ -111,15 +120,15 @@
       ],
       "settings": {
         "title": "shop by category",
-        "linkTitle": "<p>shop all<\/p>",
-        "linklabel": "shopify:\/\/collections\/all"
+        "linkTitle": "<p>shop all</p>",
+        "linklabel": "shopify://collections/all"
       }
     },
     "hero_bannar_fmzUQ7": {
       "type": "hero-bannar",
       "settings": {
-        "herobannar": "shopify:\/\/shop_images\/Group_11135_1.webp",
-        "imgurl": "shopify:\/\/products\/calm-hydrate-starter-set"
+        "herobannar": "shopify://shop_images/Group_11135_1.webp",
+        "imgurl": ""
       }
     },
     "section_skincare_tips_ENpTqx": {
@@ -128,28 +137,28 @@
         "kinds_DHYNXz": {
           "type": "kinds",
           "settings": {
-            "img": "shopify:\/\/shop_images\/iocn-2_1.webp",
+            "img": "shopify://shop_images/iocn-2_1.webp",
             "type": "Cruelty Free"
           }
         },
         "kinds_ekezTh": {
           "type": "kinds",
           "settings": {
-            "img": "shopify:\/\/shop_images\/VeganCropped_1.webp",
+            "img": "shopify://shop_images/VeganCropped_1.webp",
             "type": "Vegan"
           }
         },
         "kinds_PPFLjA": {
           "type": "kinds",
           "settings": {
-            "img": "shopify:\/\/shop_images\/iocn-2_1.webp",
+            "img": "shopify://shop_images/iocn-2_1.webp",
             "type": "Carbon Label"
           }
         },
         "kinds_mKxgJq": {
           "type": "kinds",
           "settings": {
-            "img": "shopify:\/\/shop_images\/iocn-4_1.webp",
+            "img": "shopify://shop_images/iocn-4_1.webp",
             "type": "Sensitive Skin Friendly"
           }
         }
@@ -161,7 +170,7 @@
         "kinds_mKxgJq"
       ],
       "settings": {
-        "title": "<p><strong>skincare with substance<\/strong><\/p>",
+        "title": "<p><strong>skincare with substance</strong></p>",
         "subTitle": "sensitive skin friendly products for hydration and skin barrier support"
       }
     },
@@ -176,7 +185,7 @@
       "type": "featured-collection",
       "disabled": true,
       "settings": {
-        "title": "<strong>Save on Sets<\/strong>",
+        "title": "<strong>Save on Sets</strong>",
         "heading_size": "h0",
         "description": "",
         "show_description": false,
