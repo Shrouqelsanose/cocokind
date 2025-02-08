@@ -116,7 +116,8 @@ document.addEventListener("DOMContentLoaded", () => {
             centeredSlides: true,
             fixedWidth: 300,
             arrows: true,
-
+            delay: 3000,
+            speed: 1000,
             effect: "coverflow",
             coverflowEffect: {
               rotate: 0,
@@ -125,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
               modifier: 3,
               slideShadows: true,
             },
+
             navigation: {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",

@@ -16,6 +16,7 @@
 .footer-blocks_link a {
   text-decoration: none;
 }
+
 .socail-media-brands {
   display: flex;
   justify-content: center;
@@ -49,4 +50,46 @@
 }
 .cocokind-sr a {
   text-decoration: none;
+}
+.footer-blocks-contain {
+  display: none;
+}
+@media screen and (max-width: 750px) {
+  .footer-blocks-container_block {
+    display: none;
+  }
+
+  .footer-blocks-container_title {
+    font-size: 18px;
+    padding: 5px 0;
+  }
+  .footer-blocks-contain {
+    padding: 10px;
+    display: block;
+  }
+  .footer-blocks-container_link {
+    border-bottom: 1px solid;
+  }
+  .footer-blocks-container_title {
+    display: flex;
+    justify-content: space-between;
+  }
+  .arrow-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-blocks-container_link .arrow-down {
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  .footer-blocks-container_link[open] .arrow-down {
+    rotate: 180deg;
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
 }

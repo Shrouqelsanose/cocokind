@@ -1,0 +1,158 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "faqs": {
+      "type": "shipping-section",
+      "blocks": {
+        "name_Y67f9N": {
+          "type": "name",
+          "settings": {
+            "name": "skincare"
+          }
+        },
+        "info_MbDVqN": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>Are all your products certified organic?<\/strong><\/p>",
+            "information": "<ul><li>While not all of our products are certified organic, most of our formulas feature certified organic ingredients. We conduct extensive research on all of our chosen ingredients to ensure that they meet our strict efficacy, safety, and sustainability standards.<\/li><\/ul>"
+          }
+        },
+        "info_icyann": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>Are your products gluten\/soy-free?<\/strong><\/p>",
+            "information": "<p>All of our products are formulated without gluten or peanuts! While we avoid soy as much as possible, the following products contain soy-derived ingredients:<\/p><ul><li>texture smoothing cream<\/li><li>pore refining concentrate<\/li><li>sea kale clay mask<\/li><li>vitamin c serum<\/li><li>ceramide barrier serum<\/li><li>postbiotic acne serum<\/li><li>revitalizing eye cream<\/li><li>scrubbing clay<\/li><li>daily spf<\/li><li>matcha face moisturizer (discontinued)<\/li><\/ul><p>Since these products may contain traces of soy protein, we recommend that customers with soy allergies avoid these products<\/p>"
+          }
+        },
+        "info_zFrBBT": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>Are your products vegan?<\/strong><\/p>",
+            "information": "<p>With the exception of our beeswax-inclusive products, all of our products are vegan. Products formulated with beeswax:<\/p><ul><li>mymatcha all-over moisture stick<\/li><li>skin butter<\/li><li>turmeric stick<\/li><\/ul>"
+          }
+        },
+        "info_Eyk4pP": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>Are your products cruelty-free?<\/strong><\/p><p><\/p>",
+            "information": "<p>Yes! All our products are cruelty-free.<br\/>In conjunction with the enforcement of prominent environmental standards for organic beekeeping, ethical treatment of the bees is practiced and applied when sourcing our beeswax.<\/p>"
+          }
+        },
+        "info_nbLMfb": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>Do you use essential oils in your products?<\/strong><\/p>",
+            "information": "<p>The highest percentage content of essential oils in any of our products is .3%<br\/>Products formulated with essential oils:<br\/><\/p><ul><li>chlorophyll mask<\/li><li>facial cleansing oil<\/li><li>oil-to-milk cleanserraspberry jasmine oil<\/li><li>sea moss exfoliator<\/li><li>skin butter<\/li><li>glow essencevitamin c serum<\/li><li>sea kale clay mask<\/li><li>watermelon hemp oil<\/li><li>turmeric stick treatment<\/li><li>turmeric tonic<\/li><\/ul>"
+          }
+        },
+        "info_UmTRyQ": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>How do I properly store my Cocokind products?<\/strong><\/p>",
+            "information": "<p>Tightly close all lids and caps after opening. Storing your products in a cool, dry place, and using clean hands to obtain the product will help maintain its integrity and extend its shelf life.<br\/>Extreme temperature changes can alter the consistency of the product.<br\/>Products that are safe to store in the refrigerator include rosewater toner, raspberry vinegar toner, glow essence, vitamin c serum, chia oil, watermelon hemp oil, revitalizing eye cream.<\/p>"
+          }
+        },
+        "info_BdBPrk": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>Does my product have an expiration date?<\/strong><\/p>",
+            "information": "<ul><li>Most of our products have a shelf life of about 12 months after opening. On the bottom of every product box, we list a POA (period after opening) symbol. It should look like a little open jar with a number and the letter M (months). This will help you determine how long each product is good for after opening.<\/li><\/ul>"
+          }
+        },
+        "info_MAxKYG": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>Are your products comedogenic?<\/strong><\/p>",
+            "information": "<p>There is no FDA regulation for the term “comedogenic.\" In fact, there are no standardized tests that can accurately determine if an ingredient will or will not clog your pores or cause breakouts. Skin health is completely individual and dependent on genetics and lifestyle choices, including skincare. If you are worried about breakouts, here is a great<a href=\"https:\/\/www.cocokind.com\/blogs\/news\/a-guide-to-using-our-products-to-treat-acne-prone-skin\"><em>blog post <\/em><\/a>we did on a routine we recommend.<\/p>"
+          }
+        },
+        "name_YJwhtG": {
+          "type": "name",
+          "settings": {
+            "name": "Sustainability"
+          }
+        },
+        "info_ViHm4i": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>How do I recycle Cocokind products?<\/strong><\/p>",
+            "information": "<p>Each product page has a how to recycle tab with further instructions! Generally, we recommend recycling empty tubes and bottles according to your city's guidelines. You can also repurpose our containers - for example, our rosewater bottle makes a great sprayer for watering plants and the jar for our chlorophyll mask can be used as a sauce container for a packed lunch!<\/p><p>Thank you so much for taking the initiative to be eco-responsible! If you want to learn more about <a href=\"https:\/\/www.cocokind.com\/blogs\/news\/our-work-on-sustainability\"><em>our work on sustainability<\/em><\/a><em>,<\/em> visit our blog.<\/p>"
+          }
+        },
+        "info_44JVLR": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>Can I recycle my empty glass through Cocokind?<\/strong><\/p>",
+            "information": "<ul><li>Unfortunately, we’ve discontinued our cycle back program. We realized that shipping bottles all over America required enough packaging and emissions to basically outweigh the benefits of the actual recycling. Additionally, more often than not, the bottles were coming back to us in an unusable state, so we weren’t completing the full circle of recyclability that we had hoped to. It was a great idea in theory, not so much in practice. We’re still trying to figure out our long-term solution here, to allow you all to reuse and refill your containers and cut back on waste. We’re happily taking any suggestions, too!<\/li><\/ul>"
+          }
+        },
+        "name_Rtxb8w": {
+          "type": "name",
+          "settings": {
+            "name": "Gifts and Promotions"
+          }
+        },
+        "info_4weapf": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>Does Cocokind sell gift cards?<\/strong><\/p>",
+            "information": "<p>Yes! We have online gift cards that you can purchase<a href=\"https:\/\/www.cocokind.com\/collections\/all\/products\/gift-card\">here. <\/a>After purchasing, the digital gift card is immediately emailed to you. You can then forward the gift card email to the recipient or print it out! Please keep in mind that all gift card sales are final.<br\/>At this time, we do not have the capabilities to add a personalized message. Our team is working diligently to enhance this experience!<\/p>"
+          }
+        },
+        "name_89Q9Yp": {
+          "type": "name",
+          "settings": {
+            "name": "Whole Sale\/Distribution"
+          }
+        },
+        "info_KJLdWT": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>Does Cocokind sell gift cards?<\/strong><\/p>",
+            "information": "<p>Yes! We have online gift cards that you can purchase<a href=\"https:\/\/www.cocokind.com\/collections\/all\/products\/gift-card\">here. <\/a>After purchasing, the digital gift card is immediately emailed to you. You can then forward the gift card email to the recipient or print it out! Please keep in mind that all gift card sales are final.<br\/>At this time, we do not have the capabilities to add a personalized message. Our team is working diligently to enhance this experience!<\/p>"
+          }
+        },
+        "info_jQKEET": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>Are your products comedogenic?<\/strong><\/p>",
+            "information": "<p>There is no FDA regulation for the term “comedogenic.\" In fact, there are no standardized tests that can accurately determine if an ingredient will or will not clog your pores or cause breakouts. Skin health is completely individual and dependent on genetics and lifestyle choices, including skincare. If you are worried about breakouts, here is a great<a href=\"https:\/\/www.cocokind.com\/blogs\/news\/a-guide-to-using-our-products-to-treat-acne-prone-skin\"><em>blog post <\/em><\/a>we did on a routine we recommend.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "name_Y67f9N",
+        "info_MbDVqN",
+        "info_icyann",
+        "info_zFrBBT",
+        "info_Eyk4pP",
+        "info_nbLMfb",
+        "info_UmTRyQ",
+        "info_BdBPrk",
+        "info_MAxKYG",
+        "name_YJwhtG",
+        "info_ViHm4i",
+        "info_44JVLR",
+        "name_Rtxb8w",
+        "info_4weapf",
+        "name_89Q9Yp",
+        "info_KJLdWT",
+        "info_jQKEET"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "faqs"
+  ]
+}

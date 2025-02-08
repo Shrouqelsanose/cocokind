@@ -1,0 +1,75 @@
+{{ 'rewards.css' | asset_url | stylesheet_tag }}
+
+<div class="rewards">
+  <div class="rewards__container">
+    <div class="rewards__header">
+      <div class="rewards__img">
+        <img
+          src="{{ section.settings.img |  image_url: width: 2500, height: 600}}"
+          alt="{{ section.settings.img.alt }}"
+        >
+      </div>
+
+      <div class="rewards__header__content page-width">
+        <h1 class="rewards__title">{{ section.settings.title }}</h1>
+        <p class="rewards__paragraph">{{ section.settings.paragraph }}</p>
+        <div class="rewards__btns">
+          <button type="submit" class="btn--login">
+            <a href="{{ section.settings.login }}">{{ section.settings.btnlogin }}</a>
+          </button>
+          <button type="submit" class="btn--join">
+            <a href="{{ section.settings.join }}">{{ section.settings.joinbtn }}</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "rewards",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "img header"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "text",
+      "id": "paragraph",
+      "label": "paragraph"
+    },
+    {
+      "type": "text",
+      "id": "btnlogin",
+      "label": "log in btn"
+    },
+    {
+      "type": "text",
+      "id": "joinbtn",
+      "label": "join btn"
+    },
+    {
+      "type": "url",
+      "id": "login",
+      "label": "link"
+    },
+    {
+      "type": "url",
+      "id": "join",
+      "label": "link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "rewards"
+    }
+  ]
+}
+{% endschema %}

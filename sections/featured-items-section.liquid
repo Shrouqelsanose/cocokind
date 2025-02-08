@@ -64,15 +64,15 @@
           <div class="swiper-wrapper">
             {% assign featured_collection = block.settings.collectionImg %}
             {% for product in featured_collection.products %}
-              <li class="featured-collection__product swiper-slide">
+              <div class="featured-collection__product swiper-slide">
                 {% render 'card-product', card_product: product, quick_add: 'standard' %}
-              </li>
+              </div>
             {% endfor %}
           </div>
         </div>
       {% endfor %}
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"><span></span></div>
+      <div class="swiper-button-next"><span></span></div>
     </div>
   </featured-tabs-img>
 </div>

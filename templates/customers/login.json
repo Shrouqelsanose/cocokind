@@ -1,7 +1,7 @@
 {
   "sections": {
-    "main": {
-      "type": "main-login",
+    "template": {
+      "type": "template-customer-login",
       "settings": {
         "enable_shop_login_button": "true",
         "padding_top": 36,
@@ -9,7 +9,5 @@
       }
     }
   },
-  "order": [
-    "main"
-  ]
+  "order": ["template"]
 }

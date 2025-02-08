@@ -1,0 +1,50 @@
+{{ 'slider-products.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<div class="products-slider">
+  <div class="products-slider__container">
+    <div class="products-slider__header">
+      <h1 class="products-slider__title">{{ section.settings.title }}</h1>
+    </div>
+    <div class="products-slider__product-cards" data-flickity='{ "cellAlign": "center", "contain": true }'>
+      {% for product in section.settings.collectionProducts.products %}
+        <div class="padding-slide">
+          <div class="products-slider__product-card">
+            <a href="{{ product.url }}">
+              <div class="products-slider__img">
+                <img
+                  src="{{ product.featured_image |  image_url: width: 300 , height: 300  }}"
+                  alt="{{ product.featured_image.alt }}"
+                >
+              </div>
+              <h3 class="products-slider__name">{{ product.title }}</h3>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "slider products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "collection",
+      "id": "collectionProducts",
+      "label": "collection Products"
+    }
+  ],
+  "presets": [
+    {
+      "name": "products slider"
+    }
+  ]
+}
+{% endschema %}

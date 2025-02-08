@@ -2,13 +2,19 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rewards_kAGP3G": {
+      "type": "rewards",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "rewards_kAGP3G"
   ]
 }

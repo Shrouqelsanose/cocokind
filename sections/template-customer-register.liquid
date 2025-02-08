@@ -1,0 +1,77 @@
+<div class="login__container">
+  <div class="form__sign--in" id="form__sign--in">
+    <div>
+      <div class="form__heading">
+        <h1>Register an account</h1>
+      </div>
+      <div class="form__signin--contianer">
+        {% form 'create_customer' %}
+          {% if form.errors %}
+            <div class="errors-content">
+              <strong class="error_head">Error!</strong>
+              <p role="alert">{{ form.errors | default_errors }}</p>
+            </div>
+          {% endif %}
+          <div class="form__login-label-input">
+            <label class="form__login--label visually-hidden" for="first_name" aria-hidden="true">First Name</label>
+            <input
+              type="text"
+              name="customer[first_name]"
+              id="first_name"
+              autocomplete="given_name"
+              class="form__login--input"
+              placeholder="First Name"
+            >
+          </div>
+          <div class="form__login-label-input">
+            <label class="form__login--label visually-hidden" for="last_name" aria-hidden="true">Last Name</label>
+            <input
+              type="text"
+              name="customer[last_name]"
+              id="last_name"
+              autocomplete="last_name"
+              class="form__login--input"
+              placeholder="Last Name"
+            >
+          </div>
+
+          <div class="form__login-label-input">
+            <label class="form__login--label visually-hidden" for="email_address" aria-hidden="true"
+              >Email address</label
+            >
+            <input
+              type="email"
+              name="customer[email]"
+              id="email_address"
+              autocomplete="email"
+              class="form__login--input"
+              placeholder="Email"
+            >
+          </div>
+          <div class="form__login-label-input">
+            <label
+              class="form__login--label visually-hidden"
+              for="password"
+              aria-hidden="true"
+              >Password</label
+            >
+            <input
+              type="password"
+              name="customer[password]"
+              id="password"
+              autocomplete="new-password"
+              class="form__login--input"
+              placeholder="password"
+            >
+          </div>
+
+          <div class="btn-login">
+            <button class="btn-submit" type="submit">
+              Create Account <span class="arrow-right"> {% render 'icons-arrow-right' %}</span>
+            </button>
+          </div>
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</div>

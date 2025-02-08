@@ -99,7 +99,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   padding-left: 3rem;
   padding-right: 3rem;
 }
-. @media screen and (min-width: 750px) {
+@media screen and (min-width: 750px) {
   .page-width {
     padding: 0 5rem;
   }
@@ -123,6 +123,9 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   }
 }
 
+.mage-with-text__content .button .button--primary {
+  background-color: #e56b54;
+}
 @media screen and (min-width: 990px) {
   .header:not(.drawer-menu).page-width {
     padding-left: 5rem;

@@ -1,0 +1,113 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "cocokind_foundation": {
+      "type": "cocokind-foundation",
+      "settings": {
+        "title": "<p>cocokind impact<br\/>foundation<\/p>",
+        "paragragh": "<p>the cocokind impact foundation provides a financial grant to one female-identifying entrepreneur in health, wellness, and sustainability industries who are focused on creating social impact through business. our foundation is set up by cocokind and managed through philanthropic ventures foundation (PVF), a 501(c)(3) nonprofit, ein number 94-3136771.<\/p>"
+      }
+    },
+    "shipping_section_6WNx9A": {
+      "type": "shipping-section",
+      "blocks": {
+        "name_Ayd4g6": {
+          "type": "name",
+          "settings": {
+            "name": "information"
+          }
+        },
+        "info_GFBV8Y": {
+          "type": "info",
+          "settings": {
+            "title": "<p>What is the Cocokind Impact Foundation?<br\/><\/p>",
+            "information": "<p>The Cocokind Impact Foundation provides a financial grant to one female-identifying entrepreneur in the health, wellness, and sustainability industries, who are focused on creating social impact through business. Our foundation is set up by Cocokind and managed through Philanthropic Ventures Foundation (PVF), a 501(c)(3) nonprofit, EIN number 94-3136771.<\/p>"
+          }
+        },
+        "info_tKUFMR": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>What is the amount of each grant?<\/strong><\/p>",
+            "information": "<p>The Cocokind Impact Foundation is providing grant of $6,000 to enable our female-identifying founders with the financial assistance needed to further their business and social impact. <\/p>"
+          }
+        },
+        "info_VNghP3": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>Who is eligible to apply for the grant?<\/strong><\/p>",
+            "information": "<p>Applicants must be 18 years or older. Applicants must be a U.S. resident and owner of a woman-owned business incorporated in the United States. To apply, you must be a female-identifying entrepreneur in the health, wellness, and\/or sustainability space with a mission to create greater social impact. Applicants must have not yet raised a round of institutional capital.<\/p>"
+          }
+        },
+        "info_YUeegW": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>What information is needed to apply?<\/strong><\/p>",
+            "information": "<p>Please fill out the <a href=\"https:\/\/docs.google.com\/forms\/d\/1PBakChIFqqUOMMet3ZwqPZeO2PAxk9yvh0e3cAlIMLc\/viewform?edit_requested=true\"><em>here.<\/em> <\/a>apapplication plication will include:  <br\/><br\/>A three-minute video of yourself. Here’s what we want to see:  <br\/><br\/>1. YOU! – We want to hear about the person behind the business. Take this opportunity to introduce yourself.  <br\/><br\/>2. Your mission – Share your vision with us!<br\/>3. Your impact – Don’t be shy, tell us exactly why your business should receive this grant.<br\/>4. A proposal of what you will do with the funds granted. Please provide an itemized projection or as much detail as possible on what you plan on using this for. The more detailed your breakdown, the better!<\/p><p><br\/>5. A detailed description of your social mission and what impact you hope to have on your greater community.<\/p><p><br\/>6. A sample of your product (where applicable) sent to:Cocokind 907 Harrison St San Francisco, CA 94107ATTN: COCOKIND IMPACT FOUNDATION<\/p>"
+          }
+        },
+        "info_wJfJ7r": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>In addition to the grant, what else does the program entail?<\/strong><\/p>",
+            "information": "<p>Along with $6,000, the grantee recipient will also receive:<br\/><br\/>- Access to our dynamic and talented Cocokind team<br\/><br\/>- The opportunity to connect with relevant team members for one on one advisory support<br\/><br\/>- Lifetime membership to the Cocokind Impact Foundation Alumni Network<\/p>"
+          }
+        },
+        "info_6kkyBG": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>How are Grantees Selected?<\/strong><\/p>",
+            "information": "<p>Our selection committee is comprised of various Cocokind team members. We will review all applications submitted on time. The following criteria will be taken into consideration with each application:<\/p><p><br\/>- Social Impact & Mission<br\/><br\/>- Sustainability<br\/><br\/>- Leadership and Innovation<\/p>"
+          }
+        },
+        "info_EQ8VcD": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>Do I have to pay back the grant? What is required if I am rewarded the grant?<\/strong><\/p>",
+            "information": "<p>Winner is not expected to pay back the grant. Our only requirement is that you pay it forward as best as you can! We’ll support you in taking advantage of all of the resources available to you, along with the grant. We also hope to help you develop a network of like-minded entrepreneurs.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "name_Ayd4g6",
+        "info_GFBV8Y",
+        "info_tKUFMR",
+        "info_VNghP3",
+        "info_YUeegW",
+        "info_wJfJ7r",
+        "info_6kkyBG",
+        "info_EQ8VcD"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "video_AirgXj": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=vlx5iO9i8ZU",
+        "cover_image": "shopify:\/\/shop_images\/1234.png",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cocokind_foundation",
+    "shipping_section_6WNx9A",
+    "video_AirgXj"
+  ]
+}

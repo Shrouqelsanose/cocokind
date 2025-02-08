@@ -176,7 +176,7 @@
                   {% assign featured_collection = block.settings.collection %}
                   <li>
                     <header-menu>
-                      <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu ">
+                      <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu" >
                         <summary
                           id="HeaderMenu-{{ featured_collection.handle }}"
                           class="header__menu-item list-menu__item link focus-inset"
@@ -196,7 +196,7 @@
                             class="mega-menu__list page-width mega-menu__list--condensed"
                             role="list"
                           >
-                          <div class="menu-styles" data-flickity='{ "cellAlign": "center", "contain": true }'
+                          <div class="menu-styles" data-flickity='{ "cellAlign": "left", "contain": true  }'
                           >
                           {% for product in featured_collection.products %}
                             <div class="mega-menu__product carousel-cell">
@@ -405,12 +405,24 @@
 
 {% javascript %}
 
+const menus = document.querySelectorAll('.mega-menu')
+
+menus.forEach((menu)=>{
+  menu.addEventListener("click", function () {
+  window.dispatchEvent(new Event("resize"));
+          
+})
+
+})
+
+
 
   class StickyHeader extends HTMLElement {
     constructor() {
       super();
+    
     }
-
+ 
     connectedCallback() {
       this.header = document.querySelector('.section-header');
       this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' || this.getAttribute('data-sticky-type') === 'reduce-logo-size';

@@ -1,0 +1,122 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "transparency": {
+      "type": "transparency",
+      "settings": {
+        "img": "shopify:\/\/shop_images\/transparency-panels_4_copy_1.webp",
+        "title": "<p>transparency evolved<\/p>",
+        "paragraph": "We’re setting a new goal as a brand: to disrupt the status quo within the beauty industry. Instead of settling for how things are and were, with buzzy marketing claims and little else to back them up, we want to be as transparent with our customers as possible about what goes into our products, from ingredients to impact, to help you feel empowered and fully informed when you shop. We’re just getting started, but we hope you join us as we strive to be honest, approachable, and inclusive!"
+      }
+    },
+    "multirow_eWYHgi": {
+      "type": "multirow",
+      "blocks": {
+        "row_PdYWr9": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/formula-facts.webp",
+            "caption": "",
+            "heading": "<strong>formulation facts<\/strong>",
+            "text": "<p>To help you make more educated choices, our packaging moving forward will feature a formulation facts panel. This panel will show you how we build a product on the building blocks of skincare formulations, such as hero ingredients, carriers, and emulsifiers, so you know exactly what you’re putting on your skin. Our formulas are based on research-backed ingredients at effective levels, and you should be able to see that for yourself.<\/p>",
+            "button_label": "Learn more",
+            "button_link": "shopify:\/\/blogs\/news\/our-commitment-to-pushing-transparency-forward"
+          }
+        },
+        "row_4cjERF": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sustainability-facts.webp",
+            "caption": "",
+            "heading": "<strong>sustainability stats<\/strong>",
+            "text": "<p>New to our packaging are our sustainability facts, which break down the carbon footprint for a product’s life cycle. Not only will measuring this information allow us to make future commitments to reduce our carbon footprint, but sharing it can help you learn what your impact is on the environment when you consume cocokind!<\/p>",
+            "button_label": "Learn more",
+            "button_link": "shopify:\/\/blogs\/news\/measuring-our-carbon-footprint"
+          }
+        }
+      },
+      "block_order": [
+        "row_PdYWr9",
+        "row_4cjERF"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-right",
+        "section_color_scheme": "scheme-1",
+        "row_color_scheme": "scheme-3b3d95ed-3c2b-46d4-8f09-383a2c6556e3",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "slider_products_d9pKeF": {
+      "type": "slider-products",
+      "settings": {
+        "title": "shop bestsellers",
+        "collectionProducts": "shop-bestsellers"
+      }
+    },
+    "rich_text_9W89DQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_XGDiVG": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>what’s coming next<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_q7Wwk9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As we push forward in our transparency efforts, we have a lot of work ahead of us. In addition to our current commitments, we’ve identified three phases to establish future goals and reduce our carbon footprint. Our first and current phase is to measure our impact on a product and company level, which involves auditing our entire supply chain. The second phase is to offset those emissions and find opportunities for reduction. Finally, the third phase is to create actionable steps for reduction every year and communicate those to our customers. We’re making continuous improvements and commitments as we go, so thank you for your patience and support.<\/p>"
+          }
+        },
+        "button_MVwXYj": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify:\/\/blogs\/news\/measuring-our-carbon-footprint",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_XGDiVG",
+        "text_q7Wwk9",
+        "button_MVwXYj"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "transparency",
+    "multirow_eWYHgi",
+    "slider_products_d9pKeF",
+    "rich_text_9W89DQ"
+  ]
+}

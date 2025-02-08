@@ -1,0 +1,43 @@
+{{ 'transparency.css' | asset_url | stylesheet_tag }}
+
+<div class="transparency">
+  <div class="transparency__container">
+    <div class="transparency__img">
+      <img
+        src="{{ section.settings.img |  image_url: width: 3172 , height: 1080  }}"
+        alt="{{  section.settings.img.alt   }}"
+      >
+    </div>
+    <div class="transparency__content page-width">
+      <h1 class="transparency__title">
+        {{ section.settings.title }}
+      </h1>
+      <p class="transparency__paragraph">
+        {{ section.settings.paragraph }}
+      </p>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "transparency",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "img"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "text",
+      "id": "paragraph",
+      "label": "paragraph"
+    }
+  ]
+}
+{% endschema %}

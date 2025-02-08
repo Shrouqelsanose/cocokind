@@ -1,0 +1,76 @@
+{{ 'shipping.css' | asset_url | stylesheet_tag }}
+
+<div class="faq">
+  <div class="faq__container page-width">
+    <div class="faq__header">
+      <h1 class="faq__title">
+        {{ section.settings.title }}
+      </h1>
+    </div>
+    <div class="faq__questions">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'name' %}
+            <h2 class="faq__question__title">{{ block.settings.name }}</h2>
+          {% when 'info' %}
+            <details class="faq__question page-width">
+              <summary class="" id="block_title-{{ section.id   }}-{{ forloop.index }}">
+                <span class="icon-plus"> {% render 'icon-plus' %} </span>
+                <span class="icon-menus"> {% render 'icon-menus' %} </span>
+
+                {{ block.settings.title }}
+              </summary>
+              <div class="faq__answer ">{{ block.settings.information | replace: 'em>', 'span>' }}</div>
+            </details>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "shipping page",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "shipping page"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "info",
+      "name": "informaion",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "information",
+          "label": "Information"
+        }
+      ]
+    },
+    {
+      "type": "name",
+      "name": "block_name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "name"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

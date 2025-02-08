@@ -1,0 +1,30 @@
+{{ 'cocokind-foundation.css' | asset_url | stylesheet_tag }}
+
+<div class="cocokind-foundation">
+  <div class="cocokind-foundation__container">
+    <div class="cocokind-foundation__header">
+      <h1 class="cocokind-foundation__title page-width">{{ section.settings.title }}</h1>
+    </div>
+    <div class="cocokind-foundation__content page-width">
+      <p class="cocokind-foundation__paragraph">{{ section.settings.paragragh }}</p>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "cocokind-foundation",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "paragragh",
+      "label": "paragragh"
+    }
+  ]
+}
+{% endschema %}

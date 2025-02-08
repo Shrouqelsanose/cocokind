@@ -10,8 +10,180 @@
     },
     "shipping": {
       "type": "shipping-section",
-      "settings": {}
+      "blocks": {
+        "name_8XBnep": {
+          "type": "name",
+          "settings": {
+            "name": "tracking"
+          }
+        },
+        "info_eUWmcd": {
+          "type": "info",
+          "settings": {
+            "title": "<p>              Where is my order? My tracking link won't update.<br\/><\/p>",
+            "information": "<p>We’re so sorry about any shipping delay you may be experiencing. Our current delivery time frame is 3-7 business days. (This does not include weekends or holidays)<br\/><br\/>Our carriers are experiencing significant delays due to nationwide COVID-19 impacts and tracking links may take several days to update. We understand this is frustrating and kindly ask for your patience as we do not control how quickly our carriers scans, sorts, and delivers your package.<br\/><br\/><br\/>It's possible your estimated delivery date through UPS has expired. It is likely your package was delivered to USPS and is awaiting scanning there.<br\/><br\/>If your package was sent via UPS and passed off to USPS for final delivery, you can find your new USPS tracking link by scrolling down to Shipment Details on the right-hand side. Access your new tracking number under Package Identification Code. Please see the screenshot below. Use this number to track via the USPS tracking portal.<br\/><br\/><br\/>If you have not received your order within the original shipping time frame of 3-7 business days, please email us at<a href=\"mailto:info@cocokind.com\"><em>info@cocokind.com<\/em><\/a>. Our customer service team will get to the bottom of it!<\/p>"
+          }
+        },
+        "info_eFr9XG": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>Where is my tracking link?<\/strong><\/p><p><\/p>",
+            "information": "<p>As soon as your order is fulfilled, you will be emailed a tracking link. If you did not receive a tracking link or believe the wrong email address was entered at checkout, please email<a href=\"mailto:info@cocokind.com\"><em>info@cocokind.com<\/em><\/a><em>.<\/em><\/p>"
+          }
+        },
+        "info_bP3FVW": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>I never received my order but my package says delivered. what do i do?<\/strong><\/p><p><\/p>",
+            "information": "<p>We’re so sorry to hear that you never received your order! Please follow the steps below:<br\/>Confirm that your shipping address is correct in your confirmation email.<br\/><br\/>Give us a little more time. Sometimes our courrier scans something as delivered before it's actually physically delivered. In some cases, it can take 1-2 business days for your shipment to appear.<br\/><br\/><br\/>Check with neighbors, housemates, areas near your mailbox, and\/or mailroom, in case your package was received elsewhere.<br\/><br\/><br\/>Check your USPS tracking link for a notice of an attempted delivery. This notice will have instructions on the next steps you should take.<br\/><br\/><br\/>Contact USPS and use your tracking number to start a claim with them.<br\/><br\/><br\/>Missing packages are usually found within 2 days of delivery. If you’ve completed all of the steps above and still haven’t found your package, please contact us via email at<a href=\"mailto:info@cocokind.com\"><em>info@cocokind.com<\/em>!<\/a>Our customer service team will make it right!<\/p>"
+          }
+        },
+        "name_tQnPtA": {
+          "type": "name",
+          "settings": {
+            "name": "shipping"
+          }
+        },
+        "info_GJFUYE": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>When will my order ship?<\/strong><\/p>",
+            "information": "<p>Here’s how it works!<br\/><br\/>Upon completing your purchase, you will receive a confirmation email. It can take a few business days to process your order and when your shipping label is printed, you will receive a second email with a tracking link. This link will provide the most accurate time frame for delivery! Please keep in mind that standard shipping is 3-7 business days, not including holidays or weekends.<\/p>"
+          }
+        },
+        "info_WnKMAr": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>Where does cocokind ship to?<\/strong><\/p>",
+            "information": "<p>Currently, we ship to all 50 states in the US, Puerto Rico, and Canada.<br\/><br\/>Use our<a href=\"https:\/\/www.cocokind.com\/pages\/stockists\"><em>store locator<\/em><\/a>to find retail stores in your area!<\/p>"
+          }
+        },
+        "info_fPm9jQ": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>Does cocokind ship to Canada?<\/strong><\/p><p><\/p>",
+            "information": "<p>yes!<br\/><br\/>Unfortunately, any order that exceeds $20 USD may be subject to import duties and fees, taxes and other charges. If your order requires these additional charges, they must be paid by you in order for your package to clear customs. Cocokind does not collect any duties and\/or taxes and we cannot predict what your charges may be.<br\/><br\/><br\/><br\/><br\/>Once your order has shipped, we are unable to refund any shipping costs incurred should you not accept the customs charges. If you wish to cancel your order prior to shipping, please contac<em>t<\/em><a href=\"mailto:info@cocokind.com\"><em>info@cocokind.com.<\/em><br\/><\/a><\/p>"
+          }
+        },
+        "info_Cqt4KR": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>What shipping methods are available?<\/strong><\/p><p><\/p>",
+            "information": "<p>We use both UPS and USPS as carriers, and we're unable to predetermine which carrier will be used for a specific order. We offer the following shipping options:<br\/><br\/>US & Puerto Rico:<br\/><br\/>Standard Shipping - $6, delivery within 3-7 business days.<br\/><br\/>Canada:<br\/><br\/>Standard Shipping - $18, delivery within 12 - 21 business days<br\/><br\/><br\/>Please keep in mind that business days do not include weekends or holidays.<br\/><br\/>Once your package reaches customs in Canada, it is handled by Canada Post which does not provide international tracking. It is common for packages to be marked as “Delivered” only to arrive later. Cocokind would like our customers to be aware of these factors before placing an order with us.<br\/><br\/><\/p>"
+          }
+        },
+        "info_b3ckqY": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>How can I change my shipping address?<\/strong><\/p>",
+            "information": "<p>If you haven’t received a tracking email:<br\/><br\/>Please email<a href=\"mailto:info@cocokind.com\"><em>info@cocokind.com <\/em><\/a>with your order number and new address as soon as possible! Although our fulfillment team processes orders quickly, we will try our best to process your request!<br\/><br\/>If you have received a tracking email, unfortunately your order has been fulfilled and is on its way to the address entered at checkout. You can try contacting USPS directly to intercept the package.<br\/><\/p>"
+          }
+        },
+        "name_jJKBwA": {
+          "type": "name",
+          "settings": {
+            "name": "returns"
+          }
+        },
+        "info_AbtVeX": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>What is cocokind’s return policy?<\/strong><\/p><p><\/p>",
+            "information": "<p>Oh no! We’re sorry to hear that our products didn’t work out for you. We do offer a full refund for online orders within 30 days of delivery. Products must have been purchased through our online store, and be in new or gently used condition.<\/p><p>Please keep in mind: We do not refund original shipping charges. All gift cards and trial products are final sale.<\/p><p>To move forward with a return request, please email<a href=\"mailto:info@cocokind.com%20\"><em> info@cocokind.com <\/em><\/a>with your order number and the items you would like to return.<\/p>"
+          }
+        },
+        "info_XNrFFT": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>Can I request an exchange for items purchased online?<\/strong><\/p>",
+            "information": "<p>Unfortunately, we do not offer the option to exchange products at the moment!<br\/>If something didn’t work out, please emai<em>l<\/em><a href=\"mailto:info@cocokind.com\"><em>info@cocokind.com<\/em><\/a>for additional assistance<\/p>"
+          }
+        },
+        "info_mpbCiU": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>Can I return items that were not purchased online?<\/strong><\/p><p><\/p>",
+            "information": "<p>Regrettably, we are unable to accept online returns for products purchased elsewhere. Please check with the original place of purchase for their return policy and feel free to reach out to<em> <\/em><a href=\"mailto:info@cocokind.com\"><em>info@cocokind.com<\/em><\/a> if you have any questions!.<\/p>"
+          }
+        },
+        "name_jwMpK9": {
+          "type": "name",
+          "settings": {
+            "name": "orders"
+          }
+        },
+        "info_Q9kqVL": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>How can I change or update my order?<\/strong><\/p>",
+            "information": "<p>We are unable to add items to your order because for privacy reasons, we do not store credit card information.<\/p><p>Removing items\/change in address\/change in payment:<\/p><p>Please email us at<em> <\/em><a href=\"mailto:info@cocokind.com\"><em>info@cocokind.com<\/em><\/a> as soon as possible if you would like to make any modifications to your order, and we’ll try our best to process your request!<\/p><p><strong>Please note that we’re unable to make changes to an order once it has been fulfilled.<\/strong><\/p>"
+          }
+        },
+        "info_PKBjbY": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>How can I cancel my order?<\/strong><\/p><p><\/p>",
+            "information": "<p>Please email us at as soon as possible if you would like to cancel your order, and we’ll try our best to process your request!<\/p><p>Please note that we’re unable to cancel an order once it has been fulfilled.<\/p><p>There is something wrong with my order, how can I get resolution on this? We’re so sorry about this! Please email with your order number and a photo for reference, if applicable. Our customer service team will assist with making it right!<\/p>"
+          }
+        },
+        "name_TwxpK4": {
+          "type": "name",
+          "settings": {
+            "name": "Billing"
+          }
+        },
+        "info_NBnWGE": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>When will my credit card be charged?<\/strong><\/p>",
+            "information": "<p>Your credit card will be charged as soon as your order is accepted and processed.<\/p>"
+          }
+        },
+        "info_fAUUXB": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>What forms of payment do you accept?<\/strong><\/p>",
+            "information": "<p>We accept Visa, Mastercard, American Express, Discover, Shop pay, Apple Pay, and PayPal. Unfortunately, we cannot accept checks or money orders. Please note that VISA gift cards or cocokind gift cards must completely cover the total amount of your order, otherwise we can't process it.<\/p>"
+          }
+        },
+        "info_WAxRMU": {
+          "type": "info",
+          "settings": {
+            "title": "<p><strong>What can I do if my payment is declined?<\/strong><\/p>",
+            "information": "<p>Oh no! Here are a few things to check if your payment didn’t go through: Make sure that we accept the form of payment you are trying to use! Check that your card has not expired and that your card’s billing details (such as the security code and billing address) match what you’ve entered into our system. If you continue to have problems, please send screenshots of the error you are receiving to<a href=\"mailto:info@cocokind.com\"><em>info@cocokind.com<\/em> <\/a>so we can help!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "name_8XBnep",
+        "info_eUWmcd",
+        "info_eFr9XG",
+        "info_bP3FVW",
+        "name_tQnPtA",
+        "info_GJFUYE",
+        "info_WnKMAr",
+        "info_fPm9jQ",
+        "info_Cqt4KR",
+        "info_b3ckqY",
+        "name_jJKBwA",
+        "info_AbtVeX",
+        "info_XNrFFT",
+        "info_mpbCiU",
+        "name_jwMpK9",
+        "info_Q9kqVL",
+        "info_PKBjbY",
+        "name_TwxpK4",
+        "info_NBnWGE",
+        "info_fAUUXB",
+        "info_WAxRMU"
+      ],
+      "settings": {
+        "title": "Shipping & Delivery FAQs"
+      }
     }
   },
-  "order": ["main", "shipping"]
+  "order": [
+    "main",
+    "shipping"
+  ]
 }

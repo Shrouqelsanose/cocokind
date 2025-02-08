@@ -1,0 +1,121 @@
+{{ 'login.css' | asset_url | stylesheet_tag }}
+
+<div class="login__container">
+  <div class="form__sign--in" id="form__sign--in">
+    <div>
+      <div class="form__heading">
+        <h1>{{ section.settings.loginTitle }}</h1>
+      </div>
+      <div class="form__signin--contianer">
+        {% form 'customer_login' %}
+          {% if form.errors %}
+            <div class="errors-content">
+              <strong class="error_head">Error!</strong>
+              <p role="alert">{{ form.errors | default_errors }}</p>
+            </div>
+          {% endif %}
+          <div class="form__login-label-input">
+            <label class="form__login--label visually-hidden" for="email_address" aria-hidden="true"
+              >Email address</label
+            >
+            <input
+              type="email"
+              name="customer[email]"
+              id="email_address"
+              autocomplete="email"
+              class="form__login--input"
+              placeholder="Email"
+            >
+          </div>
+
+          {% if form.password_needed %}
+            <div class="form__login-label-input">
+              <label
+                class="form__login--label visually-hidden"
+                for="password"
+                aria-hidden="true"
+                >Password</label
+              >
+              <input
+                type="password"
+                name="customer[password]"
+                id="password"
+                autocomplete="current-password"
+                class="form__login--input"
+                placeholder="password"
+              >
+            </div>
+          {% endif %}
+          <div class="sign__up">
+            Don't have an account?
+            <span> <a href="https://shrouqelsanose.myshopify.com/account/register">Create Account </a> </span>to create
+            one
+          </div>
+
+          <div class="btn-login" onclick="showSpinner()">
+            <button class="btn-submit" type="submit">
+              <span class="btn-name">
+                Login <span class="arrow-right"> {% render 'icons-arrow-right' %}</span>
+              </span>
+              <span id="spinner" class="hidden"></span>
+            </button>
+          </div>
+          <a class="forget__password" href="#form__recover">Forget Password</a>
+        {% endform %}
+      </div>
+    </div>
+  </div>
+
+  <div class="form__recover--container" id="form__recover">
+    <div>
+      <div class="form__heading">
+        <h1>Recover Your Password</h1>
+      </div>
+      <div class="form__signin--contianer">
+        {% form 'recover_customer_password' %}
+          {% if form.errors %}
+            <div class="errors-content">
+              <strong class="error_head">Error!</strong>
+              <p role="alert">{{ form.errors | default_errors }}</p>
+            </div>
+          {% endif %}
+          <div class="form__login-label-input">
+            <label class="form__login--label visually-hidden" for="email" aria-hidden="true">Email address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="email"
+              class="form__login--input"
+              placeholder="Email"
+            >
+          </div>
+
+          <div class="btn-login">
+            <button class="btn-submit" type="submit">Recover Password</button>
+          </div>
+          <a class="login-password" href="#form__sign--in">Back to Login</a>
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</div>
+{{ 'login.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+  "name": "login",
+  "settings": [
+    {
+      "type": "text",
+      "label": "login Title",
+      "id": "loginTitle"
+    }
+  ],
+  "presets": [
+    {
+      "name": "login"
+    }
+  ]
+}
+{% endschema %}

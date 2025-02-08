@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+.transparency__img {
+  width: 100%;
+}
+.transparency__img img {
+  width: 100%;
+}
+.transparency__content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 700px;
+}
+.transparency__title p {
+  font-size: 62px;
+  font-weight: 900;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+}
+.transparency__paragraph {
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}

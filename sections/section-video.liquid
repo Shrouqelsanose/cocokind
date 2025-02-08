@@ -1,0 +1,26 @@
+<div class="video">
+  <div class="video__container">
+    <video controls="controls" style="max-width: 100%; height: auto;">
+      <source src="{{ section.settings.video }}" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "video",
+  "settings": [
+    {
+      "type": "video_url",
+      "id": "video",
+      "label": "Video",
+      "accept": ["youtube"]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video"
+    }
+  ]
+}
+{% endschema %}
