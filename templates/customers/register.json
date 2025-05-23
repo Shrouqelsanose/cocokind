@@ -1,12 +1,25 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "template": {
       "type": "template-customer-register",
+<<<<<<< HEAD
       "settings": {
         "title": "JOIN CLUB KIND",
         "paragraph": "Something new is coming 👀 As a member you'll receive early access to product launches, exclusive discounts, earn points on every purchase, and so much more.Plus, we're giving you 100 points just for signing up!",
         "check": false
       }
+=======
+      "settings": {}
+>>>>>>> ffb6fe6c051722750b65ea871379260ebb6aeb2c
     }
   },
   "order": [

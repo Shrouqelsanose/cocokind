@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+>>>>>>> ffb6fe6c051722750b65ea871379260ebb6aeb2c
 {
   "sections": {
     "main": {
@@ -8,6 +20,7 @@
         "padding_bottom": 28
       }
     },
+<<<<<<< HEAD
     "payment": {
       "type": "payment",
       "settings": {
@@ -16,10 +29,19 @@
         "title": "get 20% give 20%",
         "paragraph": "Give your friends 20% off their first order of $50 and get 20% off your next order for each successful referral."
       }
+=======
+    "rewards_kAGP3G": {
+      "type": "rewards",
+      "settings": {}
+>>>>>>> ffb6fe6c051722750b65ea871379260ebb6aeb2c
     }
   },
   "order": [
     "main",
+<<<<<<< HEAD
     "payment"
+=======
+    "rewards_kAGP3G"
+>>>>>>> ffb6fe6c051722750b65ea871379260ebb6aeb2c
   ]
 }
