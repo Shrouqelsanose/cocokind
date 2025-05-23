@@ -7,6 +7,7 @@
 .rewards__img {
   width: 100%;
   height: 100%;
+  display: flex;
 }
 
 .rewards__img img {
@@ -54,4 +55,54 @@
   text-decoration: none;
   color: white;
   font-size: 18px;
+}
+.rewards__img--meida {
+  display: none;
+}
+@media screen and (max-width: 950px) {
+  .rewards__header__content {
+    bottom: 49px;
+    right: 14px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .rewards__img--meida {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .rewards__img--meida img {
+    width: 100%;
+    height: 100%;
+  }
+  .rewards__img {
+    display: none;
+  }
+  .rewards__title {
+    font-size: 50px;
+  }
+  .rewards__paragraph {
+    max-width: 350px;
+  }
+  .rewards__header__content {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .rewards__header__content {
+    width: unset;
+  }
+  .rewards__btns {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 50px;
+  }
+  .btn--login,
+  .btn--join {
+    width: 100%;
+  }
 }

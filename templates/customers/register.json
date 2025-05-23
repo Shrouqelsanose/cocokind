@@ -3,10 +3,13 @@
     "template": {
       "type": "template-customer-register",
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
+        "title": "JOIN CLUB KIND",
+        "paragraph": "Something new is coming 👀 As a member you'll receive early access to product launches, exclusive discounts, earn points on every purchase, and so much more.Plus, we're giving you 100 points just for signing up!",
+        "check": false
       }
     }
   },
-  "order": ["template"]
+  "order": [
+    "template"
+  ]
 }

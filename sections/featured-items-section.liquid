@@ -54,7 +54,7 @@
       {% endfor %}
     </div>
 
-    <div class="featured-collection__products-container">
+    <div class="featured-collection__products-container page-width">
       {% for block in section.blocks %}
         <div
           class="featured-collection__products swiper"
@@ -65,7 +65,9 @@
             {% assign featured_collection = block.settings.collectionImg %}
             {% for product in featured_collection.products %}
               <div class="featured-collection__product swiper-slide">
-                {% render 'card-product', card_product: product, quick_add: 'standard' %}
+                <div>
+                  {% render 'card-product', card_product: product, quick_add: 'standard' %}
+                </div>
               </div>
             {% endfor %}
           </div>

@@ -1,0 +1,84 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "about_us": {
+      "type": "about-us",
+      "settings": {
+        "img": "shopify:\/\/shop_images\/image_10_1.webp",
+        "title": "enter our world of skin - you’re enough here",
+        "paragraph": "We’re here to serve botanical-forward skincare with a side of self-acceptance. All formulas in our line gently deliver the functions they promise as well as hydration, skin barrier support, or both, which we believe are the requirements for glowy, happy skin."
+      }
+    },
+    "values_rCirpP": {
+      "type": "values",
+      "blocks": {
+        "value_yTBdBc": {
+          "type": "value",
+          "settings": {
+            "title": "We believe in two universal truths in skincare — hydration and barrier support",
+            "paragraph": "All formulas in our line gently deliver the function they promise as well as hydration, skin barrier support, or both, which we believe are the requirements for glowy, happy skin."
+          }
+        },
+        "value_FY9dQK": {
+          "type": "value",
+          "settings": {
+            "title": "We believe in two universal truths in skincare — hydration and barrier support",
+            "paragraph": "All formulas in our line gently deliver the function they promise as well as hydration, skin barrier support, or both, which we believe are the requirements for glowy, happy skin."
+          }
+        },
+        "value_CHPwrk": {
+          "type": "value",
+          "settings": {
+            "title": "We put our money inside the bottle",
+            "paragraph": "Where a beauty product’s price comes from can often be unclear, and we want you to know what you’re paying for.formulas at approachable prices because our expertise and resources go inside the bottle…on the formula!"
+          }
+        },
+        "value_xYtGEx": {
+          "type": "value",
+          "settings": {
+            "title": "We put our money inside the bottle",
+            "paragraph": "Where a beauty product’s price comes from can often be unclear, and we want you to know what you’re paying for.formulas at approachable prices because our expertise and resources go inside the bottle…on the formula!"
+          }
+        },
+        "value_CUtJfR": {
+          "type": "value",
+          "settings": {
+            "title": "we know that skincare is physical and psychological",
+            "paragraph": "Breakouts happen, but we want to make sure that a 'bad' skin day doesn’t ruin your day. We know from experience that skincare goes skin. We want to help you strengthen that voice in your head that reminds you that you are enough, just as you are."
+          }
+        }
+      },
+      "block_order": [
+        "value_yTBdBc",
+        "value_FY9dQK",
+        "value_CHPwrk",
+        "value_xYtGEx",
+        "value_CUtJfR"
+      ],
+      "settings": {
+        "title": "our values"
+      }
+    },
+    "founder_article_63GMeC": {
+      "type": "founder-article",
+      "settings": {
+        "title": "a letter from our founder",
+        "img": "shopify:\/\/shop_images\/IMG_5970.webp",
+        "content": "<p>hi,<br\/><br\/>I know what it’s like to not feel enough. When I was struggling with my skin, I never left the house without a full face of makeup. I used to have to put on lotion in the dark as my skin would sting and my eyes would water every morning.<br\/><br\/>I started cocokind to change the status quo of the beauty industry and break the cycle of “aspirational beauty.”<br\/><br\/><br\/>We are a company that doesn’t need to hide how we formulate, invests in highly effective but gentle formulas, and sets fair prices based on what’s inside the bottle. Most importantly, cocokind exists to ensure that all of us have a safe place in the beauty industry where we’re celebrated and accepted, exactly as we already are.<br\/><br\/><em><strong>Priscilla (P) Tsai, founder and CEO of cocokind<\/strong><\/em><\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "about_us",
+    "values_rCirpP",
+    "founder_article_63GMeC"
+  ]
+}

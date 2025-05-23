@@ -1,0 +1,92 @@
+{{ 'products-points.css' | asset_url | stylesheet_tag }}
+
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<div class="products-points">
+  <div class="products-points__header">
+    <h1 class="products-points__title">{{ section.settings.title }}</h1>
+    <p class="products-points__paragraph">
+      {{ section.settings.paragraph }}
+    </p>
+    <h1 class="products-points__subtitle">{{ section.settings.subtitle }}</h1>
+  </div>
+  <div class="products-points__container page-width" data-flickity='{ "cellAlign": "center", "contain": true }'>
+    {% for block in section.blocks %}
+      <div class="products-points__block">
+        <div class="products-points__img">
+          <img
+            src="{{ block.settings.img |  image_url: width: 400 , height: 400  }}"
+            alt="{{ block.settings.img.alt }}"
+          >
+        </div>
+        <p class="products-points__block__paragraph">
+          {{ block.settings.paragraph }}
+        </p>
+        <h1 class="products-points__block__title">
+          {{ block.settings.title }}
+        </h1>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="products-points__footer">
+    <button class="products-points__btn">
+      <a href="https://cocokind-2.myshopify.com/account/login">{{ section.settings.btn }}</a>
+    </button>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "products points",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "text",
+      "id": "paragraph",
+      "label": "paragraph"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "subtitle"
+    },
+    {
+      "type": "text",
+      "id": "btn",
+      "label": "btn"
+    }
+  ],
+  "presets": [
+    {
+      "name": "products points"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_point",
+      "name": "product point",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "img"
+        },
+        {
+          "type": "text",
+          "id": "paragraph",
+          "label": "paragraph"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

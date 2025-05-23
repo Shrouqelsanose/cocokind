@@ -10,7 +10,13 @@
     },
     "rewards_kAGP3G": {
       "type": "rewards",
-      "settings": {}
+      "settings": {
+        "img": "shopify:\/\/shop_images\/image_2024_10_04_03_42_33_157.png",
+        "title": "sign up!",
+        "paragraph": "Join club kind to earn points every time you shop. You can turn those points into free skincare, plus get early access to new launches, discounts & offers.",
+        "btnlogin": "JOIN",
+        "joinbtn": "LOGIN"
+      }
     }
   },
   "order": [

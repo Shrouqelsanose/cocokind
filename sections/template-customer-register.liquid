@@ -1,8 +1,13 @@
+{{ 'register.css' | asset_url | stylesheet_tag }}
+
 <div class="login__container">
   <div class="form__sign--in" id="form__sign--in">
     <div>
       <div class="form__heading">
-        <h1>Register an account</h1>
+        <h1 class="form__title">{{ section.settings.title }}</h1>
+        <p class="form__paragraph">
+          {{ section.settings.paragraph }}
+        </p>
       </div>
       <div class="form__signin--contianer">
         {% form 'create_customer' %}
@@ -64,14 +69,49 @@
               placeholder="password"
             >
           </div>
-
+          <div class="checking__privcy">
+            <label for="marketing" class="custom-checkbox">
+              <input
+                type="checkbox"
+                name="customer[accepts_marketing]"
+                id="marketing"
+                class="marketing"
+              >
+              <span class="checkmark"></span>
+              I agree to receive marketing emails from cocokind about my account, product launches, discounts, and other
+              news.</label
+            >
+          </div>
           <div class="btn-login">
-            <button class="btn-submit" type="submit">
-              Create Account <span class="arrow-right"> {% render 'icons-arrow-right' %}</span>
-            </button>
+            <button class="btn-submit" type="submit">JOIN THE CLUB</button>
+          </div>
+          <div class="login__form">
+            <a href="https://cocokind-2.myshopify.com/account/login">Already a member? Sign in.</a>
           </div>
         {% endform %}
       </div>
     </div>
   </div>
 </div>
+{% schema %}
+{
+  "name": "register",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "text",
+      "id": "paragraph",
+      "label": "paragrapg"
+    },
+    {
+      "type": "checkbox",
+      "id": "check",
+      "label": "check"
+    }
+  ]
+}
+{% endschema %}

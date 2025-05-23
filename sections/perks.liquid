@@ -1,0 +1,79 @@
+{{ 'perks.css' | asset_url | stylesheet_tag }}
+
+<div class="perks">
+  <div class="perks__header">
+    <h1 class="perks__title">{{ section.settings.title }}</h1>
+  </div>
+  <div class="perks__contianer page-width">
+    {% for block in section.blocks %}
+      <div class="perks__block">
+        <div class="perks__img">
+          <img src="{{ block.settings.img |  image_url: width: 40 , height: 40  }}" alt="{{ block.settings.img.alt }}">
+        </div>
+        <div class="block__head">
+          <h1 class="perks__block__title">{{ block.settings.title }}</h1>
+          <p class="perks__block__subtitle">{{ block.settings.subtitle }}</p>
+        </div>
+        <div class="block__content">
+          {% assign usps = block.settings.tip | split: '<br/>' %}
+          {% for usp in usps %}
+            {% assign striped_usp = usp | strip_html | strip %}
+            {% if striped_usp != blank %}
+              <div class="tips-usp">
+                <span> {% render 'icon-right' %} </span> &nbsp;
+                {{- striped_usp -}}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "perks",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "perks"
+    }
+  ],
+
+  "blocks": [
+    {
+      "type": "plan",
+      "name": "plan",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "img"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "subtitle"
+        },
+        {
+          "type": "richtext",
+          "id": "tip",
+          "label": "tip"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

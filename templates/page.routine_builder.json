@@ -1,0 +1,98 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "routine_builder": {
+      "type": "routine-builder",
+      "blocks": {
+        "routine_tips_YUaTPz": {
+          "type": "routine_tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/c8VpNggXQbqSJjcXNzU0_1.jpg",
+            "type": "dry"
+          }
+        },
+        "routine_tips_6pteNT": {
+          "type": "routine_tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/yW2qVwlS1GSq0YedhR2V_1.jpg",
+            "type": "oily"
+          }
+        },
+        "routine_tips_pj8nyY": {
+          "type": "routine_tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/QOAKjVrYRaKsRnpq9Uo5_1.jpg",
+            "type": "balanced"
+          }
+        },
+        "skin_tips_kbHHXM": {
+          "type": "skin_tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Txk6mDLaTXiShco6qidX.jpg",
+            "type": "dryness or irritation"
+          }
+        },
+        "skin_tips_UXJXrA": {
+          "type": "skin_tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/2zxrK4oQyaiSbnRF0dwK.jpg",
+            "type": "uneven tone and redness"
+          }
+        },
+        "skin_tips_KcjLK4": {
+          "type": "skin_tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Hk33yynpTXunw9jhVxzo.jpg",
+            "type": "acne & blackheads"
+          }
+        },
+        "skin_tips_DcwfgN": {
+          "type": "skin_tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Cumt1wLIScKp2lMNXdGv.jpg",
+            "type": "firmness & fine lines"
+          }
+        },
+        "question_HRWerj": {
+          "type": "question",
+          "settings": {
+            "option1": "yes; my skin is typically reactive or feels uncomfortable"
+          }
+        },
+        "question_fNaxx6": {
+          "type": "question",
+          "settings": {
+            "option1": "no; my skin isn't easily irritated and can roll with the punches"
+          }
+        }
+      },
+      "block_order": [
+        "routine_tips_YUaTPz",
+        "routine_tips_6pteNT",
+        "routine_tips_pj8nyY",
+        "skin_tips_kbHHXM",
+        "skin_tips_UXJXrA",
+        "skin_tips_KcjLK4",
+        "skin_tips_DcwfgN",
+        "question_HRWerj",
+        "question_fNaxx6"
+      ],
+      "settings": {
+        "title": "How does your skin typically feel?",
+        "title2": "what is your biggest skin concern?",
+        "title3": "Is your skin sensitive?"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "routine_builder"
+  ]
+}

@@ -69,7 +69,7 @@
           "type": "link",
           "settings": {
             "linklebal": "routine builder",
-            "linkLabelurl": ""
+            "linkLabelurl": "shopify:\/\/pages\/routine_builder"
           }
         },
         "link_npY9CL": {
@@ -83,7 +83,7 @@
           "type": "link",
           "settings": {
             "linklebal": "about us",
-            "linkLabelurl": ""
+            "linkLabelurl": "shopify:\/\/pages\/about-us"
           }
         }
       },

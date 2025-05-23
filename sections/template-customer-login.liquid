@@ -15,9 +15,7 @@
             </div>
           {% endif %}
           <div class="form__login-label-input">
-            <label class="form__login--label visually-hidden" for="email_address" aria-hidden="true"
-              >Email address</label
-            >
+            <label class="form__login--label " for="email_address" aria-hidden="true">Email</label>
             <input
               type="email"
               name="customer[email]"
@@ -31,7 +29,7 @@
           {% if form.password_needed %}
             <div class="form__login-label-input">
               <label
-                class="form__login--label visually-hidden"
+                class="form__login--label "
                 for="password"
                 aria-hidden="true"
                 >Password</label
@@ -46,21 +44,21 @@
               >
             </div>
           {% endif %}
-          <div class="sign__up">
-            Don't have an account?
-            <span> <a href="https://shrouqelsanose.myshopify.com/account/register">Create Account </a> </span>to create
-            one
-          </div>
 
-          <div class="btn-login" onclick="showSpinner()">
-            <button class="btn-submit" type="submit">
+          <div class="btn-login">
+            <button class="btn-submit" type="submit" onclick="showSpinner()">
               <span class="btn-name">
-                Login <span class="arrow-right"> {% render 'icons-arrow-right' %}</span>
+                <span id="spinner" class="hidden"></span>
+                <span class="btn-text">Sign in</span>
               </span>
-              <span id="spinner" class="hidden"></span>
             </button>
           </div>
-          <a class="forget__password" href="#form__recover">Forget Password</a>
+
+          <a class="forget__password" href="#form__recover">Forgot your password?</a>
+
+          <div class="sign__up">
+            <span> <a href="https://cocokind-2.myshopify.com/account/register">Create Account </a></span>
+          </div>
         {% endform %}
       </div>
     </div>
@@ -110,6 +108,11 @@
       "type": "text",
       "label": "login Title",
       "id": "loginTitle"
+    },
+    {
+      "type": "url",
+      "id": "regs",
+      "label": "regster"
     }
   ],
   "presets": [

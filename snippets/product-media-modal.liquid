@@ -4,6 +4,7 @@
   Accepts:
   - product: {Object} Product liquid object
   - variant_images: {Array} Product images associated with a variant
+  - show_metafield_image: {Boolean} when its ture show images from metafield not form object varinat images
 
   Usage:
   {% render 'product-media-modal' %}
@@ -33,13 +34,19 @@
       tabindex="0"
     >
       {%- liquid
-        if product.selected_or_first_available_variant.featured_media != null
-          assign media = product.selected_or_first_available_variant.featured_media
-          render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: section.settings.hide_variants
+        assign featured_media = product.selected_or_first_available_variant.featured_media
+        assign product_images_array = product.metafields.custom.show_images.value | reverse | reverse
+        assign product_media = product.media
+
+        if show_metafield_image
+          assign product_media = product_images_array
+          assign featured_media = product_images_array | first
+        endif
+        if featured_media != null
+          render 'product-media', media: featured_media, loop: section.settings.enable_video_looping, variant_image: section.settings.hide_variants
         endif
       -%}
-
-      {%- for media in product.media -%}
+      {%- for media in product_media -%}
         {%- liquid
           if section.settings.hide_variants and variant_images contains media.src or variant_images contains media.id
             assign variant_image = true
@@ -47,7 +54,7 @@
             assign variant_image = false
           endif
 
-          unless media.id == product.selected_or_first_available_variant.featured_media.id
+          unless media.id == featured_media.id
             render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: variant_image
           endunless
         -%}

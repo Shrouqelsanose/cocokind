@@ -11,9 +11,13 @@
 }
 
 .faq__title {
-  font-size: 48px;
+  font-size: 35px;
   font-weight: 900;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .faq__question__title {
   display: flex;

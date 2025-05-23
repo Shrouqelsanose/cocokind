@@ -1,0 +1,104 @@
+{{ 'earn-points.css' | asset_url | stylesheet_tag }}
+
+<div class="earn-points">
+  <div class="earn-points__header">
+    <h1 class="earn-points__title">{{ section.settings.title }}</h1>
+  </div>
+  <div class="earn-points__container page-width">
+    {% for block in section.blocks %}
+      <div class="earn-points__block" id="pointsBlock">
+        <div class="earn-points__img">
+          <img
+            src="{{ block.settings.img |  image_url: width: 30 , height: 30   }}"
+            alt="{{  block.settings.img.alt }}"
+          >
+        </div>
+        <div class="earn-points__content">
+          <h1>{{ block.settings.title }}</h1>
+          <p>{{ block.settings.subtitle }}</p>
+          <div class="popup">
+            <div class="popup-content">
+              <button class="btn-signup" id="btn-signup">
+                <a href="https://cocokind-2.myshopify.com/account/register">SIGN UP</a>
+              </button>
+              <p class="login-subtitle">
+                Already a member? <a class="login_btn" href="https://cocokind-2.myshopify.com/account/login"> Log in</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const pointsBlock = document.querySelectorAll('#pointsBlock');
+    const btns = document.querySelectorAll('#btn-signup');
+
+    pointsBlock.forEach((block) => {
+      // Add border on click
+      block.addEventListener('click', function (event) {
+        event.stopPropagation(); // Prevents event bubbling
+        block.classList.add('active');
+
+        btns.forEach((btn) => {
+          btn.style.border = 'none';
+        });
+      });
+
+      // Remove border when mouse leaves the square
+      block.addEventListener('mouseleave', function () {
+        block.classList.remove('active');
+        btns.forEach((btn) => {
+          btn.style.border = '2px solid #007bff';
+        });
+      });
+    });
+  });
+</script>
+{% schema %}
+{
+  "name": "earn points",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "earn points"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "points_tips",
+      "name": "points tips",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "img"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "subtitle"
+        },
+        {
+          "type": "text",
+          "id": "btn",
+          "label": "btn"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,121 @@
+<nav class="header__inline-menu">
+  <ul class="list-menu list-menu--inline" role="list">
+    {% for block in blocks %}
+      {% case block.type %}
+        {% when 'featured_carousel_menu' %}
+          {% assign featured_collection = block.settings.collection %}
+          <li>
+            <header-menu>
+              <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
+                <summary
+                  id="HeaderMenu-{{ featured_collection.handle }}"
+                  class="header__menu-item list-menu__item link focus-inset"
+                >
+                  <span>
+                    <a href="{{ block.settings.linkLabelurl }}">{{- block.settings.menulabel | escape -}}</a>
+                  </span>
+                  {{- 'icon-caret.svg' | inline_asset_content -}}
+                </summary>
+                <div
+                  id="MegaMenu-Content-{{ forloop.index }}"
+                  class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+                  tabindex="-1"
+                >
+                  <ul
+                    class="mega-menu__list page-width mega-menu__list--condensed"
+                    role="list"
+                  >
+                    <div class="menu-styles" data-flickity='{ "cellAlign": "left", "contain": true  }'>
+                      {% for product in featured_collection.products %}
+                        <div class="mega-menu__product carousel-cell">
+                          <div class="mega-menu__product__product-img">
+                            <img
+                              src="{{ product.featured_image | image_url: width: 200, height: 200 }}"
+                              alt="{{ product.title }}"
+                            >
+                          </div>
+                          <div class="product-title">
+                            <h4>{{ product.title }}</h4>
+                          </div>
+                          <div>{{ product.price | money }}</div>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </ul>
+                  <div class="featured_carousel_menu-title">
+                    <a href="{{ block.settings.linkLabelurl }}">{{ block.settings.title }}</a>
+                  </div>
+                </div>
+              </details>
+            </header-menu>
+          </li>
+        {% when 'links_types_menu' %}
+          {% assign menuLinks = block.settings.linksMenu %}
+          <li>
+            <header-menu>
+              <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu ">
+                <summary
+                  id="HeaderMenu-{{ menuLinks.handle }}"
+                  class="header__menu-item list-menu__item link focus-inset"
+                >
+                  <span>
+                    <a href="{{ block.settings.linkLabelurl }}">{{- block.settings.menuLabel | escape -}}</a>
+                  </span>
+                  {{- 'icon-caret.svg' | inline_asset_content -}}
+                </summary>
+                <div
+                  id="MegaMenu-Content-{{ forloop.index }}"
+                  class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+                  tabindex="-1"
+                >
+                  <div class="links_types_menu-title">
+                    <a href="{{ block.settings.linkLabelurl }}">{{ block.settings.title }}</a>
+                  </div>
+                  <div class="menu-links-container">
+                    <div class="menu__links-link-container">
+                      <ul class="menu__links-link">
+                        {% for link in menuLinks.links %}
+                          <li>
+                            <a
+                              class="menu__links--link-type"
+                              href="{{ link.url }}"
+                              {% if link.url contains 'http' %}
+                                target="_blank" rel="noopener noreferrer"
+                              {% endif %}
+                            >
+                              {{ link.title | escape }}
+                            </a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                    <div class="menu__img">
+                      <img
+                        src="{{ block.settings.menuImg | image_url: width: 1500 , height: 826  }}"
+                        alt="{{ block.settings.menuImg.alt }}"
+                      >
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </header-menu>
+          </li>
+        {% when 'link' %}
+          <li>
+            <header-menu>
+              <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu ">
+                <summary
+                  id="HeaderMenu-{{ link.handle }}"
+                  class="header__menu-item list-menu__item link focus-inset"
+                >
+                  <span>
+                    <a href="{{ block.settings.linkLabelurl }}">{{- block.settings.linklebal | escape -}}</a>
+                  </span>
+                </summary>
+              </details>
+            </header-menu>
+          </li>
+      {% endcase %}
+    {% endfor %}
+  </ul>
+</nav>

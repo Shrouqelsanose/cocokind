@@ -109,16 +109,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         initializeSwiper(container) {
           return new Swiper(container, {
-            slidesPerView: 5,
-            spaceBetween: 0,
-            centeredSlides: true,
-            loop: true,
-            centeredSlides: true,
-            fixedWidth: 300,
-            arrows: true,
-            delay: 3000,
-            speed: 1000,
             effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
             coverflowEffect: {
               rotate: 0,
               stretch: 0,
@@ -126,23 +119,33 @@ document.addEventListener("DOMContentLoaded", () => {
               modifier: 3,
               slideShadows: true,
             },
-
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
+            keyboard: {
+              enabled: true,
             },
+            mousewheel: {
+              thresholdDelta: 70,
+            },
+            loop: true,
             pagination: {
               el: ".swiper-pagination",
               clickable: true,
             },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
             breakpoints: {
+              640: {
+                slidesPerView: 3,
+              },
               768: {
-                slidesPerView: 7,
-                spaceBetween: 0,
+                slidesPerView: 5,
               },
               1024: {
-                slidesPerView: 9,
-                spaceBetween: 0,
+                slidesPerView: 6,
+              },
+              1560: {
+                slidesPerView: 7,
               },
             },
           });

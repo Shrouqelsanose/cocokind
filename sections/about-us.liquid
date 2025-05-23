@@ -1,0 +1,38 @@
+{{ 'about-us.css' | asset_url | stylesheet_tag }}
+
+<div class="about-us">
+  <div class="about-us__header">
+    <div class="about-us__img">
+      <img
+        src="{{ section.settings.img |  image_url: width: 1800 , height: 710  }}"
+        alt="{{ section.settings.img.alt }}"
+      >
+    </div>
+  </div>
+  <div class="about-us__container page-width">
+    <h1 class="about-us__title">{{ section.settings.title }}</h1>
+    <p class="about-us__paragraph">{{ section.settings.paragraph }}</p>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "about us",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "img"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "text",
+      "id": "paragraph",
+      "label": "paragraph"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,65 @@
+{{ 'instractions.css' | asset_url | stylesheet_tag }}
+<div class="instractions">
+  <div class="instractions__container">
+    <div class="instractions__header">
+      <h1 class="instractions__title">{{ section.settings.title }}</h1>
+    </div>
+    <div class="instractions__blocks">
+      {% for block in section.blocks %}
+        <div class="instractions__block">
+          <div class="instractions__img">
+            <img
+              src="{{ block.settings.img |  image_url: width: 60 , height: 60  }}"
+              alt="{{  block.settings.img.alt }}"
+            >
+          </div>
+          <div class="instractions__block__content">
+            <h1 class="block__title">{{ block.settings.title }}</h1>
+            <p class="block__paragraph">{{ block.settings.paragraph }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "instractions website",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "instractions website"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tips",
+      "name": "tips",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "img"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "text",
+          "id": "paragraph",
+          "label": "paragraph"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

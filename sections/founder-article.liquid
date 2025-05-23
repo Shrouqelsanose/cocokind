@@ -1,0 +1,46 @@
+{{ 'about-us.css' | asset_url | stylesheet_tag }}
+
+<div class="founder-article page-width">
+  <div class="founder-article__header">
+    <h1 class="founder-article__title">{{ section.settings.title }}</h1>
+  </div>
+  <div class="founder-article__container">
+    <div class="founder-article__img">
+      <img
+        src="{{ section.settings.img |  image_url: width: 800 , height: 750 }}"
+        alt="{{ section.settings.img.alt }}"
+      >
+    </div>
+    <div class="founder-article__content">
+      {{ section.settings.content | replace: 'em>', 'span>' }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "founder",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "img"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "content"
+    }
+  ],
+  "presets": [
+    {
+      "name": "founder article"
+    }
+  ]
+}
+{% endschema %}

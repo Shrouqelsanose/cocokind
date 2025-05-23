@@ -1,0 +1,77 @@
+{{ 'points-money.css' | asset_url | stylesheet_tag }}
+
+<div class="points-money">
+  <div class="points-money__header">
+    <h1 class="points-money__title">{{ section.settings.title }}</h1>
+    <div>
+      <p class="points-money__subtitle">{{ section.settings.subtitle }}</p>
+      <p class="points-money__paragraph">{{ section.settings.paragraph }}</p>
+    </div>
+  </div>
+  <div class="points-money__container page-width">
+    {% for block in section.blocks %}
+      <div class="points-money__block">
+        <h1 class="points-money__block__title">{{ block.settings.title }}</h1>
+        <p class="points-money__block__subtitle">
+          {{ block.settings.subtitle }}
+        </p>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="points-money__footer">
+    <button class="points-money__btn">
+      <a href="https://cocokind-2.myshopify.com/account/login">{{ section.settings.btn }}</a>
+    </button>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "points money",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "subtitle"
+    },
+    {
+      "type": "text",
+      "id": "paragraph",
+      "label": "paragraph"
+    },
+    {
+      "type": "text",
+      "id": "btn",
+      "label": "btn"
+    }
+  ],
+  "presets": [
+    {
+      "name": "points money"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "points_money",
+      "name": "points money",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "subtitle"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

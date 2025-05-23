@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+.points-money {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.points-money__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.points-money__title {
+  color: rgb(208, 52, 95);
+  font-size: 55px;
+  font-weight: 900;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 0;
+}
+.points-money__subtitle {
+  color: rgb(208, 52, 95);
+  font-size: 25px;
+  font-weight: 400;
+  border-bottom: 2px solid rgb(208, 52, 95);
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  width: 100%;
+}
+.points-money__paragraph {
+  color: rgb(208, 52, 95);
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 2px solid rgb(208, 52, 95);
+  padding-bottom: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.points-money__container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  text-align: center;
+  justify-items: center;
+  padding-bottom: 40px;
+}
+
+.points-money__block__title {
+  color: rgb(208, 52, 95);
+  font-size: 32px;
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+}
+@media screen and (max-width: 749px) {
+  .points-money__block__title {
+    font-size: 21px;
+  }
+  .points-money__container {
+    gap: 0;
+  }
+}
+.points-money__block__subtitle {
+  color: rgb(208, 52, 95);
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+.points-money__footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.points-money__btn {
+  background-color: #d0345f;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.points-money__btn a {
+  text-decoration: none;
+  color: white;
+}

@@ -1,0 +1,25 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "payment": {
+      "type": "payment",
+      "settings": {
+        "img": "shopify:\/\/shop_images\/image_2022_09_12_19_27_39_729.jpg",
+        "subtitle": "pay it forward",
+        "title": "get 20% give 20%",
+        "paragraph": "Give your friends 20% off their first order of $50 and get 20% off your next order for each successful referral."
+      }
+    }
+  },
+  "order": [
+    "main",
+    "payment"
+  ]
+}

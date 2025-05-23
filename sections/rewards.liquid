@@ -5,8 +5,14 @@
     <div class="rewards__header">
       <div class="rewards__img">
         <img
-          src="{{ section.settings.img |  image_url: width: 2500, height: 600}}"
+          src="{{ section.settings.img |  image_url: width: 2500, height: 700}}"
           alt="{{ section.settings.img.alt }}"
+        >
+      </div>
+      <div class="rewards__img--meida">
+        <img
+          src="{{ section.settings.mediaimg |  image_url: width: 410, height: 300}}"
+          alt="{{ section.settings.mediaimg.alt }}"
         >
       </div>
 
@@ -15,10 +21,10 @@
         <p class="rewards__paragraph">{{ section.settings.paragraph }}</p>
         <div class="rewards__btns">
           <button type="submit" class="btn--login">
-            <a href="{{ section.settings.login }}">{{ section.settings.btnlogin }}</a>
+            <a href="https://cocokind-2.myshopify.com/account/register">{{ section.settings.btnlogin }}</a>
           </button>
           <button type="submit" class="btn--join">
-            <a href="{{ section.settings.join }}">{{ section.settings.joinbtn }}</a>
+            <a href="https://cocokind-2.myshopify.com/account/login">{{ section.settings.joinbtn }}</a>
           </button>
         </div>
       </div>
@@ -34,6 +40,11 @@
       "type": "image_picker",
       "id": "img",
       "label": "img header"
+    },
+    {
+      "type": "image_picker",
+      "id": "mediaimg",
+      "label": "media img"
     },
     {
       "type": "text",

@@ -15,15 +15,18 @@ loginPassword.addEventListener("click", function () {
 
 function showSpinner() {
   const spinner = document.getElementById("spinner");
-  const btn = document.querySelector(".btn-name");
+  const btnText = document.querySelector(".btn-text"); // Target only text, not the whole span
   const btnTotal = document.querySelector(".btn-submit");
+
+  // Show spinner & hide text
   spinner.classList.remove("hidden");
-  btn.classList.add("hidden");
+  btnText.style.display = "none";
   btnTotal.disabled = true;
 
   setTimeout(() => {
+    // Hide spinner & show text again
     spinner.classList.add("hidden");
-    btn.classList.remove("hidden");
+    btnText.style.display = "inline";
     btnTotal.disabled = false;
   }, 1000);
 }

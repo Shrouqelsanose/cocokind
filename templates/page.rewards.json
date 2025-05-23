@@ -1,23 +1,575 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rewards": {
+      "type": "rewards",
+      "settings": {
+        "img": "shopify:\/\/shop_images\/image_2024_10_04_03_42_33_157.png",
+        "mediaimg": "shopify:\/\/shop_images\/image_2024_10_04_03_42_37_986.png",
+        "title": "sign up!",
+        "paragraph": "Join club kind to earn points every time you shop. You can turn those points into free skincare, plus get early access to new launches, discounts & offers.",
+        "btnlogin": "JOIN",
+        "joinbtn": "LOGIN",
+        "login": "",
+        "join": ""
+      }
+    },
+    "instractions_website_aGBPyt": {
+      "type": "instractions-website",
+      "blocks": {
+        "tips_RWyePP": {
+          "type": "tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2024_10_04_03_44_33_840.svg",
+            "title": "sign up",
+            "paragraph": "Create an account and get 100 points."
+          }
+        },
+        "tips_HYNLFC": {
+          "type": "tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2024_10_04_03_44_47_688.svg",
+            "title": "earn points",
+            "paragraph": "Earn points every time you shop."
+          }
+        },
+        "tips_qFwaHU": {
+          "type": "tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2024_10_04_03_44_56_591.svg",
+            "title": "redeem points",
+            "paragraph": "Redeem points for exclusive discounts."
+          }
+        }
+      },
+      "block_order": [
+        "tips_RWyePP",
+        "tips_HYNLFC",
+        "tips_qFwaHU"
+      ],
+      "settings": {
+        "title": "how it works"
+      }
+    },
+    "perks_WQyWB3": {
+      "type": "perks",
+      "blocks": {
+        "plan_prBfPw": {
+          "type": "plan",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2024_10_04_18_39_56_363.svg",
+            "title": "rose",
+            "subtitle": "free to join",
+            "tip": "<p>1 point for every $1 spent<br\/>Free shipping on all orders $50+ (U.S. only)<br\/>10% off for your birthday<br\/>Member-exclusive sales & offers<br\/><\/p>"
+          }
+        },
+        "plan_z7Mfr9": {
+          "type": "plan",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2024_10_04_18_40_08_751.svg",
+            "title": "turmeric",
+            "subtitle": "$100 annual spend",
+            "tip": "<ul><li>1.25 points for every $1 spent<br\/>Free shipping on all orders $35+ (U.S. only)<br\/>20% off for your birthday<br\/>Member-exclusive sales & offers<br\/>Early access to product launches<br\/>Eligibility to try unreleased products<\/li><\/ul>"
+          }
+        },
+        "plan_e8kUqT": {
+          "type": "plan",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2024_10_04_18_40_25_744.svg",
+            "title": "matcha",
+            "subtitle": "$200 annual spend",
+            "tip": "<p>1.5 points for every $1 spent, plus more ways to earn<br\/>Free shipping on every order (U.S. only)<br\/>25% off for your birthday<br\/>Member-exclusive sales & offers<br\/>Early access to product launches<br\/>Eligibility to try unreleased products<br\/>Free swag 1x a year<br\/>Random acts of kindness<br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "plan_prBfPw",
+        "plan_z7Mfr9",
+        "plan_e8kUqT"
+      ],
+      "settings": {
+        "title": "level up to unlock new perks"
+      }
+    },
+    "earn_point_KxELzY": {
+      "type": "earn-point",
+      "blocks": {
+        "points_tips_UDzRbh": {
+          "type": "points_tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2024_10_04_15_26_45_577.svg",
+            "title": "1 point per $1",
+            "subtitle": "Make a purchase",
+            "btn": "SIGN UP"
+          }
+        },
+        "points_tips_zUJWEX": {
+          "type": "points_tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2024_10_04_15_34_19_015.svg",
+            "title": "100 pts",
+            "subtitle": "Create an account",
+            "btn": ""
+          }
+        },
+        "points_tips_Maf4KP": {
+          "type": "points_tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2024_10_04_15_34_34_689.svg",
+            "title": "50 pts",
+            "subtitle": "Leave a review",
+            "btn": ""
+          }
+        },
+        "points_tips_e9izic": {
+          "type": "points_tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2024_10_04_15_35_59_933.svg",
+            "title": "50 pts",
+            "subtitle": "Subscribe to a product",
+            "btn": ""
+          }
+        },
+        "points_tips_CLYtHE": {
+          "type": "points_tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2024_10_04_15_35_45_702.svg",
+            "title": "50 points",
+            "subtitle": "Take our Routine Builder Quiz",
+            "btn": ""
+          }
+        },
+        "points_tips_KYWQ9F": {
+          "type": "points_tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2024_10_04_15_35_30_518.svg",
+            "title": "10 pts",
+            "subtitle": "Follow us on Instagram",
+            "btn": ""
+          }
+        },
+        "points_tips_eiQpB6": {
+          "type": "points_tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2024_10_04_15_35_20_678.svg",
+            "title": "10 pts",
+            "subtitle": "Follow us on TikTok",
+            "btn": ""
+          }
+        },
+        "points_tips_pUpUQh": {
+          "type": "points_tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2021_10_04_17_40_40_370.png",
+            "title": "% off",
+            "subtitle": "On your birthday",
+            "btn": ""
+          }
+        },
+        "points_tips_nL4bpj": {
+          "type": "points_tips",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2024_10_04_15_36_16_221.svg",
+            "title": "15% off",
+            "subtitle": "Sign up for email",
+            "btn": ""
+          }
+        }
+      },
+      "block_order": [
+        "points_tips_UDzRbh",
+        "points_tips_zUJWEX",
+        "points_tips_Maf4KP",
+        "points_tips_e9izic",
+        "points_tips_CLYtHE",
+        "points_tips_KYWQ9F",
+        "points_tips_eiQpB6",
+        "points_tips_pUpUQh",
+        "points_tips_nL4bpj"
+      ],
+      "settings": {
+        "title": "ways to earn points"
+      }
+    },
+    "products_points_JEJNFR": {
+      "type": "products-points",
+      "blocks": {
+        "product_point_THJttN": {
+          "type": "product_point",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/68368_1684347451.original.png",
+            "paragraph": "travel-size ceramide barrier serum ($10 value)",
+            "title": "150 POINTS"
+          }
+        },
+        "product_point_mFda3X": {
+          "type": "product_point",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/68375_1684355146.original.png",
+            "paragraph": "travel-size ceramide barrier serum ($10 value)",
+            "title": "150 POINTS"
+          }
+        },
+        "product_point_FHCy6K": {
+          "type": "product_point",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2023_09_21_21_56_06_340.png",
+            "paragraph": "travel-size ceramide barrier serum ($10 value)",
+            "title": "150 POINTS"
+          }
+        },
+        "product_point_9rPpeG": {
+          "type": "product_point",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2022_10_05_17_49_27_003.png",
+            "paragraph": "travel-size ceramide barrier serum ($10 value)",
+            "title": "250 POINTS"
+          }
+        },
+        "product_point_q46ADH": {
+          "type": "product_point",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/68375_1684355146.original.png",
+            "paragraph": "travel-size ceramide barrier serum ($10 value)",
+            "title": "250 POINTS"
+          }
+        },
+        "product_point_KWR6iX": {
+          "type": "product_point",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2023_09_21_21_59_03_643.png",
+            "paragraph": "travel-size ceramide barrier serum ($10 value)",
+            "title": "250 POINTS"
+          }
+        },
+        "product_point_Q7zEjk": {
+          "type": "product_point",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2023_09_21_21_58_32_701.png",
+            "paragraph": "travel-size ceramide barrier serum ($10 value)",
+            "title": "350 POINTS"
+          }
+        },
+        "product_point_mJjqNc": {
+          "type": "product_point",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/66242_1674678968.original.png",
+            "paragraph": "travel-size ceramide barrier serum ($10 value)",
+            "title": "350 POINTS"
+          }
+        },
+        "product_point_mF3wM9": {
+          "type": "product_point",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_2023_09_21_21_57_38_607.png",
+            "paragraph": "travel-size ceramide barrier serum ($10 value)",
+            "title": "350 POINTS"
+          }
+        },
+        "product_point_XtzLgp": {
+          "type": "product_point",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/62780_1665077803.original.png",
+            "paragraph": "travel-size ceramide barrier serum ($10 value)",
+            "title": "350 POINTS"
+          }
+        }
+      },
+      "block_order": [
+        "product_point_THJttN",
+        "product_point_mFda3X",
+        "product_point_FHCy6K",
+        "product_point_9rPpeG",
+        "product_point_q46ADH",
+        "product_point_KWR6iX",
+        "product_point_Q7zEjk",
+        "product_point_mJjqNc",
+        "product_point_mF3wM9",
+        "product_point_XtzLgp"
+      ],
+      "settings": {
+        "title": "how to use your points",
+        "paragraph": "You earned them, use them! You can redeem your points for $$ or cash them in for a free product on your next purchase.",
+        "subtitle": "turn points into products",
+        "btn": "REDEEM MY POINTS"
+      }
+    },
+    "points_money_aAD73B": {
+      "type": "points-money",
+      "blocks": {
+        "points_money_znpUej": {
+          "type": "points_money",
+          "settings": {
+            "title": "$5 Off",
+            "subtitle": "100 points"
+          }
+        },
+        "points_money_qkWfBU": {
+          "type": "points_money",
+          "settings": {
+            "title": "",
+            "subtitle": ""
+          }
+        },
+        "points_money_eNDjLm": {
+          "type": "points_money",
+          "settings": {
+            "title": "$8 Off",
+            "subtitle": "150 points"
+          }
+        },
+        "points_money_8kAj87": {
+          "type": "points_money",
+          "settings": {
+            "title": "",
+            "subtitle": ""
+          }
+        },
+        "points_money_iYijhV": {
+          "type": "points_money",
+          "settings": {
+            "title": "$18 Off",
+            "subtitle": "350 points"
+          }
+        },
+        "points_money_a6LCJP": {
+          "type": "points_money",
+          "settings": {
+            "title": "",
+            "subtitle": ""
+          }
+        },
+        "points_money_VR7cMy": {
+          "type": "points_money",
+          "settings": {
+            "title": "$12 Off",
+            "subtitle": "250 points"
+          }
+        },
+        "points_money_PJMLcY": {
+          "type": "points_money",
+          "settings": {
+            "title": "",
+            "subtitle": ""
+          }
+        },
+        "points_money_Tq8dDW": {
+          "type": "points_money",
+          "settings": {
+            "title": "$20 Off",
+            "subtitle": "400 points"
+          }
+        }
+      },
+      "block_order": [
+        "points_money_znpUej",
+        "points_money_qkWfBU",
+        "points_money_eNDjLm",
+        "points_money_8kAj87",
+        "points_money_iYijhV",
+        "points_money_a6LCJP",
+        "points_money_VR7cMy",
+        "points_money_PJMLcY",
+        "points_money_Tq8dDW"
+      ],
+      "settings": {
+        "title": "turn points into $$$",
+        "subtitle": "*on all orders $15+",
+        "paragraph": "100 points equals $5.00",
+        "btn": "REDEEM MY POINTS"
+      }
+    },
+    "payment_WKkBxV": {
+      "type": "payment",
+      "settings": {
+        "img": "shopify:\/\/shop_images\/image_2022_09_12_19_27_39_729.jpg",
+        "subtitle": "pay it forward",
+        "title": "get 20% give 20%",
+        "paragraph": "Give your friends 20% off their first order of $50 and get 20% off your next order for each successful referral."
+      }
+    },
+    "shipping_section_rJ9pmg": {
+      "type": "shipping-section",
+      "blocks": {
+        "info_qVJWx7": {
+          "type": "info",
+          "settings": {
+            "title": "<h2><strong>Do my points expire?<\/strong><\/h2>",
+            "information": "<p>Yes, points expire after 12 months of account inactivity. To remain active, you must earn or redeem points<\/p>"
+          }
+        },
+        "info_XqQp3K": {
+          "type": "info",
+          "settings": {
+            "title": "<h2><strong>Do my points expire?<\/strong><\/h2>",
+            "information": "<p>Yes, points expire after 12 months of account inactivity. To remain active, you must earn or redeem points<\/p>"
+          }
+        },
+        "info_36jFEw": {
+          "type": "info",
+          "settings": {
+            "title": "<h2><strong>How do I enroll in the program?<\/strong><\/h2>",
+            "information": "<p>It’s free to enroll! Just create an account on cocokind.com and you’ll automatically be enrolled in club kind. If you’ve already created an account, you’re all set!<\/p>"
+          }
+        },
+        "info_HrYXwz": {
+          "type": "info",
+          "settings": {
+            "title": "<h2><strong>How do I enroll in the program?<\/strong><\/h2>",
+            "information": "<p>It’s free to enroll! Just create an account on cocokind.com and you’ll automatically be enrolled in club kind. If you’ve already created an account, you’re all set!<\/p>"
+          }
+        },
+        "info_dCUYmj": {
+          "type": "info",
+          "settings": {
+            "title": "<h2><strong>Can I remove personal info from my receipt before uploading?<\/strong><\/h2>",
+            "information": "<h2><strong>Can I remove personal info from my receipt before uploading<\/strong><\/h2>"
+          }
+        },
+        "info_MXRG7x": {
+          "type": "info",
+          "settings": {
+            "title": "<h2><strong>can i earn points for buying cocokind in store?<\/strong><\/h2><p><\/p><p><\/p>",
+            "information": "<h2><strong>can i earn points for buying cocokind in store?<\/strong><\/h2><p><\/p><p><\/p>"
+          }
+        },
+        "info_4gFUPa": {
+          "type": "info",
+          "settings": {
+            "title": "<h2><strong>How do I enroll in the program?<\/strong><\/h2>",
+            "information": "<p>It’s free to enroll! Just create an account on cocokind.com and you’ll automatically be enrolled in club kind. If you’ve already created an account, you’re all set!<\/p>"
+          }
+        },
+        "info_bHNdXf": {
+          "type": "info",
+          "settings": {
+            "title": "<h2><strong>What can I earn with my points?<\/strong><\/h2>",
+            "information": "<p>Members can redeem points for select full-sized products or coupons.<\/p>"
+          }
+        },
+        "info_mffkVD": {
+          "type": "info",
+          "settings": {
+            "title": "<h2><strong>Can I remove personal info from my receipt before uploading?<\/strong><\/h2>",
+            "information": "<h2><strong>Can I remove personal info from my receipt before uploading<\/strong><\/h2>"
+          }
+        },
+        "info_DCbxqa": {
+          "type": "info",
+          "settings": {
+            "title": "<h2><strong>What can I earn with my points?<\/strong><\/h2>",
+            "information": "<p>Members can redeem points for select full-sized products or coupons.<\/p>"
+          }
+        },
+        "info_9HreVD": {
+          "type": "info",
+          "settings": {
+            "title": "<h2><strong>What can I earn with my points?<\/strong><\/h2>",
+            "information": "<p>Members can redeem points for select full-sized products or coupons.<\/p>"
+          }
+        },
+        "info_7UnCHR": {
+          "type": "info",
+          "settings": {
+            "title": "<h2><strong>What can I earn with my points?<\/strong><\/h2>",
+            "information": "<p>Members can redeem points for select full-sized products or coupons.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "info_qVJWx7",
+        "info_XqQp3K",
+        "info_36jFEw",
+        "info_HrYXwz",
+        "info_dCUYmj",
+        "info_MXRG7x",
+        "info_4gFUPa",
+        "info_bHNdXf",
+        "info_mffkVD",
+        "info_DCbxqa",
+        "info_9HreVD",
+        "info_7UnCHR"
+      ],
+      "settings": {
+        "title": "faqs"
+      }
+    },
+    "shipping_section_WfzQ9m": {
+      "type": "shipping-section",
+      "blocks": {
+        "info_zaztid": {
+          "type": "info",
+          "settings": {
+            "title": "<h2><strong>can i earn points for buying cocokind in store?<\/strong><\/h2>",
+            "information": "<p>Yes! We offer points for every dollar spent at ANY brick & mortar retailer (no third party ecommerce stores like <a href=\"https:\/\/www.target.com\/\"><em>Target <\/em><\/a><em>  <\/em><a href=\"https:\/\/www.amazon.com\/\"><em>Amazon<\/em><\/a> or <a href=\"https:\/\/www.ulta.com\/\"><em>Ulta<\/em> <\/a>), <strong>in the last 14 days<\/strong>.<\/p><p><\/p>"
+          }
+        },
+        "info_jQxyWp": {
+          "type": "info",
+          "settings": {
+            "title": "<h2><strong>can i earn points for buying cocokind in store?<\/strong><\/h2>",
+            "information": "<p>Yes! We offer points for every dollar spent at ANY brick & mortar retailer (no third party ecommerce stores like <a href=\"https:\/\/www.target.com\/\"><em>Target <\/em><\/a><em>  <\/em><a href=\"https:\/\/www.amazon.com\/\"><em>Amazon<\/em><\/a> or <a href=\"https:\/\/www.ulta.com\/\"><em>Ulta<\/em> <\/a>), <strong>in the last 14 days<\/strong>.<\/p><p><\/p>"
+          }
+        },
+        "info_QnMB7x": {
+          "type": "info",
+          "settings": {
+            "title": "<h2><strong>can i earn points for buying cocokind in store?<\/strong><\/h2>",
+            "information": "<p>Yes! We offer points for every dollar spent at ANY brick & mortar retailer (no third party ecommerce stores like <a href=\"https:\/\/www.target.com\/\"><em>Target <\/em><\/a><em>  <\/em><a href=\"https:\/\/www.amazon.com\/\"><em>Amazon<\/em><\/a> or <a href=\"https:\/\/www.ulta.com\/\"><em>Ulta<\/em> <\/a>), <strong>in the last 14 days<\/strong>.<\/p><p><\/p>"
+          }
+        },
+        "info_VUChcC": {
+          "type": "info",
+          "settings": {
+            "title": "<h2><strong>can i earn points for buying cocokind in store?<\/strong><\/h2>",
+            "information": "<p>Yes! We offer points for every dollar spent at ANY brick & mortar retailer (no third party ecommerce stores like <a href=\"https:\/\/www.target.com\/\"><em>Target <\/em><\/a><em>  <\/em><a href=\"https:\/\/www.amazon.com\/\"><em>Amazon<\/em><\/a> or <a href=\"https:\/\/www.ulta.com\/\"><em>Ulta<\/em> <\/a>), <strong>in the last 14 days<\/strong>.<\/p><p><\/p>"
+          }
+        },
+        "info_8geWgE": {
+          "type": "info",
+          "settings": {
+            "title": "<h2><strong>can i earn points for buying cocokind in store?<\/strong><\/h2>",
+            "information": "<p>Yes! We offer points for every dollar spent at ANY brick & mortar retailer (no third party ecommerce stores like <a href=\"https:\/\/www.target.com\/\"><em>Target <\/em><\/a><em>  <\/em><a href=\"https:\/\/www.amazon.com\/\"><em>Amazon<\/em><\/a> or <a href=\"https:\/\/www.ulta.com\/\"><em>Ulta<\/em> <\/a>), <strong>in the last 14 days<\/strong>.<\/p><p><\/p>"
+          }
+        },
+        "info_AbP3Bq": {
+          "type": "info",
+          "settings": {
+            "title": "<h2><strong>can i earn points for buying cocokind in store?<\/strong><\/h2>",
+            "information": "<p>Yes! We offer points for every dollar spent at ANY brick & mortar retailer (no third party ecommerce stores like <a href=\"https:\/\/www.target.com\/\"><em>Target <\/em><\/a><em>  <\/em><a href=\"https:\/\/www.amazon.com\/\"><em>Amazon<\/em><\/a> or <a href=\"https:\/\/www.ulta.com\/\"><em>Ulta<\/em> <\/a>), <strong>in the last 14 days<\/strong>.<\/p><p><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "info_zaztid",
+        "info_jQxyWp",
+        "info_QnMB7x",
+        "info_VUChcC",
+        "info_8geWgE",
+        "info_AbP3Bq"
+      ],
+      "settings": {
+        "title": "*new* retail receipts for Points"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rewards",
+    "instractions_website_aGBPyt",
+    "perks_WQyWB3",
+    "earn_point_KxELzY",
+    "products_points_JEJNFR",
+    "points_money_aAD73B",
+    "payment_WKkBxV",
+    "shipping_section_rJ9pmg",
+    "shipping_section_WfzQ9m"
   ]
 }

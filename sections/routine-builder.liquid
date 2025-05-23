@@ -1,0 +1,137 @@
+{{ 'routine-builder.css' | asset_url | stylesheet_tag }}
+<div class="routine-builder">
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <h1 class="progress-text"><span id="step-number">1</span></h1>
+    <div class="progress-bar">
+      <div class="progress-line"><span></span></div>
+      <span class="progress-circle active"></span>
+      <span class="progress-circle"></span>
+      <span class="progress-circle"></span>
+      <span class="progress-circle"></span>
+    </div>
+  </div>
+
+  <div class="steps">
+    <div class="step active" data-step="0">
+      <h2 class="steps__title">{{ section.settings.title }}</h2>
+      <p class="steps__subtitle">select one</p>
+      <div class="steps_content">
+        {% for block in section.blocks %}
+          {% if block.type == 'routine_tips' %}
+            <div class="option" onclick="nextStep()">
+              <img
+                src="{{ block.settings.img | image_url: width: 150, height: 150 }}"
+                alt="{{ block.settings.img.alt }}"
+              >
+              <p class="step__type">{{ block.settings.type }}</p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="step" data-step="1">
+      <h2 class="steps__title">{{ section.settings.title2 }}</h2>
+      <div class="steps_content">
+        {% for block in section.blocks %}
+          {% if block.type == 'skin_tips' %}
+            <div class="option" onclick="nextStep()">
+              <img src="{{ block.settings.img | image_url: width: 80, height: 80 }}" alt="{{ block.settings.img.alt }}">
+              <p class="step__type">{{ block.settings.type }}</p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="step" data-step="2">
+      <h2 class="steps__title">{{ section.settings.title3 }}</h2>
+      {% for block in section.blocks %}
+        {% if block.type == 'question' %}
+          <div class="options">
+            <label class="option-label" onclick="selectFinalOption()">
+              <input type="checkbox">
+              <p class="check__type">{{ block.settings.option1 }}</p>
+            </label>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="step final" data-step="3">
+      <span> {% render 'icons-message' %}</span>
+      <h2 class="steps__title">Your personalized routine is ready.</h2>
+      <p class="steps__subtitle">Enter your email to save 25% off your first order!</p>
+      <div class="form__signin--contianer">
+        {% form 'customer_login' %}
+          {% if form.errors %}
+            <div class="errors-content">
+              <strong class="error_head">Error!</strong>
+              <p role="alert">{{ form.errors | default_errors }}</p>
+            </div>
+          {% endif %}
+          <div class="form__login-label-input">
+            <label class="form__login--label visually-hidden" for="email" aria-hidden="true">
+              enter email address</label
+            >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="email"
+              class="form__login--input"
+              placeholder="Email"
+            >
+          </div>
+
+          <div class="btn-login">
+            <button class="routine__btn-submit" type="submit">Subscribe and see results</button>
+          </div>
+          <a href="">just show me my routine</a>
+        {% endform %}
+      </div>
+      <button class="routine__btn-start" onclick="restart()">Restart</button>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <button class="back-button" onclick="prevStep()">← BACK</button>
+    <button class="next-button disabled" onclick="nextStep()">NEXT →</button>
+  </div>
+</div>
+{{ 'routine-builder.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+  "name": "Routine Builder",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Title" },
+    { "type": "text", "id": "title2", "label": "Title2" },
+    { "type": "text", "id": "title3", "label": "Title3" }
+  ],
+  "blocks": [
+    {
+      "type": "routine_tips",
+      "name": "Routine Tips",
+      "settings": [
+        { "type": "image_picker", "id": "img", "label": "Image" },
+        { "type": "text", "id": "type", "label": "Type" }
+      ]
+    },
+    {
+      "type": "skin_tips",
+      "name": "Skin Tips",
+      "settings": [
+        { "type": "image_picker", "id": "img", "label": "Image" },
+        { "type": "text", "id": "type", "label": "Type" }
+      ]
+    },
+    {
+      "type": "question",
+      "name": "Question",
+      "settings": [{ "type": "text", "id": "option1", "label": "Option 1 Text" }]
+    }
+  ]
+}
+{% endschema %}
