@@ -1,0 +1,110 @@
+{{ "swiper-slider.css" |  asset_url |  stylesheet_tag }}
+
+<style>
+  
+</style>
+<div class="fashion-slider">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        
+      
+      <div class="swiper-slide" data-slide-bg-color="#D1C4B4">
+        <!-- slide title wrap -->
+        <div class="fashion-slider-title" data-swiper-parallax="-130%">
+          <!-- slide title text -->
+          <div class="fashion-slider-title-text">{{ block.settings.text }}</div>
+        </div>
+        <!-- slide image wrap -->
+        <div class="fashion-slider-scale">
+          <!-- slide image -->
+          <img
+            src="{{ block.settings.img |  image_url: width: 3000}}" alt="{{ block.settings.img.alt }}"
+          >
+        </div>
+      </div>
+{% endfor %}
+    <div class="fashion-slider-button-prev fashion-slider-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 350 160 90">
+        <g class="fashion-slider-svg-wrap">
+          <g class="fashion-slider-svg-circle-wrap">
+            <circle cx="42" cy="42" r="40"></circle>
+          </g>
+          <path
+            class="fashion-slider-svg-arrow"
+            d="M.983,6.929,4.447,3.464.983,0,0,.983,2.482,3.464,0,5.946Z"
+          ></path>
+          <path class="fashion-slider-svg-line" d="M80,0H0"></path>
+        </g>
+      </svg>
+    </div>
+
+    <div class="fashion-slider-button-next fashion-slider-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 350 160 90">
+        <g class="fashion-slider-svg-wrap">
+          <g class="fashion-slider-svg-circle-wrap">
+            <circle cx="42" cy="42" r="40"></circle>
+          </g>
+          <path
+            class="fashion-slider-svg-arrow"
+            d="M.983,6.929,4.447,3.464.983,0,0,.983,2.482,3.464,0,5.946Z"
+          ></path>
+          <path class="fashion-slider-svg-line" d="M80,0H0"></path>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+{{ "swiper-slider-min.js" |  asset_url |  script_tag }}
+{{ "swiper-slider.js" |  asset_url | script_tag }}
+{% schema %}
+{
+  "name": "Swiper Slider",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "auto_scroll",
+      "label": "Auto Scroll"
+    },
+    {
+      "type": "range",
+      "id": "scroll_speed",
+      "label": "Scroll Speed",
+      "max": 30,
+      "min": 0,
+      "step": 1,
+      "default": 5,
+      "unit": "s",
+      "visible_if": "{{ section.settings.auto_scroll }}"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Swiper Slider"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
