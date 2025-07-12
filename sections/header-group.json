@@ -45,7 +45,7 @@
             "collection": "best-sellers",
             "menulabel": "🔥 Trending 🔥",
             "title": "shop all",
-            "linkLabelurl": "shopify:\/\/collections\/trending"
+            "linkLabelurl": "shopify://collections/trending"
           }
         },
         "links_types_menu_RxeXBe": {
@@ -53,9 +53,9 @@
           "settings": {
             "linksMenu": "shoping",
             "menuLabel": "Shop all",
-            "title": "<p>Shoping by<\/p>",
-            "menuImg": "shopify:\/\/shop_images\/ewc_-_nav_-_concept_2_2.webp",
-            "linkLabelurl": "shopify:\/\/collections\/all"
+            "title": "<p>Shoping by</p>",
+            "menuImg": "shopify://shop_images/ewc_-_nav_-_concept_2_2.webp",
+            "linkLabelurl": "shopify://collections/all"
           }
         },
         "featured_carousel_menu_Dzw63y": {
@@ -64,35 +64,35 @@
             "collection": "best-sellers",
             "menulabel": "best sellers",
             "title": "shop all best sellers",
-            "linkLabelurl": "shopify:\/\/collections\/best-sellers"
+            "linkLabelurl": "shopify://collections/best-sellers"
           }
         },
         "link_7LmcFM": {
           "type": "link",
           "settings": {
             "linklebal": "save on sets",
-            "linkLabelurl": "shopify:\/\/collections\/save-on-sets"
+            "linkLabelurl": "shopify://collections/save-on-sets"
           }
         },
         "link_V47Yya": {
           "type": "link",
           "settings": {
             "linklebal": "routine builder",
-            "linkLabelurl": "shopify:\/\/pages\/routine_builder"
+            "linkLabelurl": "shopify://pages/routine_builder"
           }
         },
         "link_npY9CL": {
           "type": "link",
           "settings": {
             "linklebal": "rewards",
-            "linkLabelurl": "shopify:\/\/pages\/rewards"
+            "linkLabelurl": "shopify://pages/rewards"
           }
         },
         "link_xGk73f": {
           "type": "link",
           "settings": {
             "linklebal": "about us",
-            "linkLabelurl": "shopify:\/\/pages\/about-us"
+            "linkLabelurl": "shopify://pages/about-us"
           }
         }
       },
@@ -121,10 +121,28 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "1752333406400f1568": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_DhDnaB": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": ""
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_DhDnaB"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "1752333406400f1568"
   ]
 }
